@@ -43,6 +43,10 @@ By the end of this module, you will be able to:
 
 ### 2.4 기능 테스트하기
 이 기능을 테스트하려면 'Employee' 사용자 역할을 가진 사용자로 로그인할 수 있어야 합니다. 계정을 만들려면 Administration.AccountOverview 페이지를 애플리케이션 탐색에 추가합니다. 탐색에도 로그아웃 액션을 추가하는 것을 잊지 마세요!
+- ![image](https://github.com/user-attachments/assets/7330b237-ac21-42c7-9977-e010ec103a4e)
+- ![image](https://github.com/user-attachments/assets/23839218-9d5a-4a4a-b1e7-901564f6ea69)
+- ![image](https://github.com/user-attachments/assets/532b421b-d6df-4921-928d-2df04d93e0e8)
+    - 해당 페이지에 해당 권한을 넣어주면 navigation에 해당 User Roles가 들어갑니다.
 
 이제 MxAdmin 사용자로 로그인하고 해당 페이지에서 계정을 생성할 수 있습니다. 두 개의 'Employee' 역할을 가진 계정과 두 개의 'Manager' 역할을 가진 계정을 생성하여 수행한 작업을 테스트해 보세요.
 
@@ -50,10 +54,9 @@ By the end of this module, you will be able to:
 - 로그아웃한 후 MxAdmin으로 다시 로그인합니다.
 - 관리자는 제출된 요청 목록을 보고 요청을 열어 'Approver' 레이블이 붙은 드롭다운을 사용하여 승인자를 지정할 수 있습니다. 필드에 나타나는 이름은 'Manager' 사용자 역할이 할당된 계정만 포함됩니다.
 
-- ![image](https://github.com/user-attachments/assets/7330b237-ac21-42c7-9977-e010ec103a4e)
-- ![image](https://github.com/user-attachments/assets/23839218-9d5a-4a4a-b1e7-901564f6ea69)
-- ![image](https://github.com/user-attachments/assets/532b421b-d6df-4921-928d-2df04d93e0e8)
-    - 해당 페이지에 해당 권한을 넣어주면 navigation에 해당 User Roles가 들어갑니다.
+# XPath 표현식
+- [XPath 표현식 공식 문서](https://docs.mendix.com/refguide/xpath-expressions/)
  
-
+# XPath 함수
+- [XPath 함수 공식 문](https://docs.mendix.com/refguide9/xpath-constraint-functions/)
 
