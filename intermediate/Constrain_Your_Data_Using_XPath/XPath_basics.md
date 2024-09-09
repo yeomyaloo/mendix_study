@@ -38,8 +38,12 @@ XPath는 Mendix 플랫폼 전반에서 데이터베이스의 데이터 흐름을
 - 이전 강의에서 Mendix에서 XPath를 사용할 수 있는 위치에 대해 배웠습니다. 이번 강의에서는 XPath를 구성하는 요소들에 대해 배우게 됩니다.
 - XPath 사용 가능 위치
   - 페이지
+      - 데이터 그리드
+      - 데이터 리스트 
   - 마이크로 플로우
+      - Retrieve Action
   - 보안(security)
+      - Entity Access Rules
 
 ### 2. XPath 구문(XPath Syntax)
 - XPath 문은 Mendix 런타임에 의해 올바르게 해석되기 위해 따라야 하는 특정 구문(syntax)을 따릅니다.
