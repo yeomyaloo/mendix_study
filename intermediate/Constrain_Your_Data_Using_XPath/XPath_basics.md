@@ -66,6 +66,42 @@ XPath 제약 조건을 만들 때 기억해야 할 사항은 다음과 같습니
     - 여러 연관 관계가 같은 엔티티 간에 있을 때는 연관 관계 이름을 고유하게 만드세요. 예를 들어, VacationRequest_Account와 VacationRequest_Account_2는 연관 관계의 차이를 설명하지 않습니다. VacationRequest_Submitter와 VacationRequest_Approver는 XPath를 읽을 때 한눈에 차이를 알 수 있습니다.
 3. 도메인 모델과 XPath 편집기를 화면 양쪽에 나란히 두면 올바른 경로를 찾는 데 도움이 됩니다.
 
+## 퀴즈
+### Question 1:
+Where in Mendix Studio Pro can you configure XPaths?
+Your answer: List Views
+
+Other options and reasons:
+
+Text widgets (텍스트 위젯): XPaths는 텍스트 위젯에서 설정되지 않습니다. 텍스트 위젯은 페이지에 정적 또는 동적 텍스트를 표시하는 데 사용되지만, XPath 구성은 데이터 검색 및 제약 조건과 관련이 있습니다.
+Page access rules (페이지 접근 규칙): 페이지 접근 규칙은 사용자 권한과 데이터 가시성과 관련이 있지만, XPath를 직접 구성하는 것과는 관련이 없습니다.
+Navigation (네비게이션): 네비게이션 설정은 사용자가 페이지 간에 이동하는 방법을 결정하지만, XPath 구성을 포함하지 않습니다.
+
+### Question 2:
+Which Widget feature utilizes XPaths?
+Your answer: Selectable data constraints on Reference Selectors
+
+Other options and reasons:
+
+Dynamic text in Labels (라벨의 동적 텍스트): 동적 텍스트를 가진 라벨은 XPaths를 사용하지 않습니다. 이들은 데이터나 변수에 따라 텍스트를 표시하지만, XPath 구성과는 관련이 없습니다.
+Styling properties of Action Buttons (액션 버튼의 스타일 속성): 스타일 속성은 버튼의 외관과 관련이 있으며, XPath 구성과는 관련이 없습니다.
+The tab index of a Group Box (그룹 박스의 탭 인덱스): 탭 인덱스는 그룹 박스 내에서의 탐색 순서와 관련이 있으며, XPath와는 관련이 없습니다.
+
+### Question 3:
+Where can you utilize XPaths in microflows?
+Your answer: In the ‘Retrieve’ action
+
+Other options and reasons:
+
+In the input parameter (입력 매개변수): 입력 매개변수는 마이크로플로우에 전달되는 데이터를 정의하지만, XPath와는 관련이 없습니다.
+In the ‘Open page’ action (‘페이지 열기’ 액션): ‘페이지 열기’ 액션은 페이지 간 이동을 위해 사용되며, XPath를 사용하지 않습니다.
+In the ‘Commit’ action (‘커밋’ 액션): ‘커밋’ 액션은 데이터베이스에 변경 사항을 저장하는 데 사용되며, XPath 구성과는 관련이 없습니다.
+Summary of Correct Answers:
+
+List Views (리스트 뷰): XPaths는 리스트 뷰에서 구성되어 어떤 항목이 표시될지 정의합니다.
+Selectable data constraints on Reference Selectors (참조 선택기의 선택 가능한 데이터 제약): XPaths는 참조 선택기에서 선택할 수 있는 데이터를 필터링하는 데 사용됩니다.
+In the ‘Retrieve’ action (‘검색’ 액션에서): XPaths는 마이크로플로우의 ‘검색’ 액션에서 데이터베이스에서 가져올 데이터를 지정하는 데 사용됩니다.
+
 
 
 
