@@ -53,12 +53,12 @@ XPath는 Mendix 플랫폼 전반에서 데이터베이스의 데이터 흐름을
 ## 멘딕스가 어떻게 도움이 될수 있을까? (How Can Mendix Help You?)
 Mendix 플랫폼은 XPath 제약 조건을 구성할 때 자동 완성(auto-completion) 옵션을 통해 도움을 줄 수 있습니다. 열린 괄호 [ 또는 슬래시 /를 입력하면 자동 완성 기능이 자동으로 열립니다. 또한, 자동 완성을 잃어버리거나 다른 곳을 클릭하여 자동 완성이 사라졌을 때는 CTRL+Space를 눌러 자동 완성 기능에 접근할 수 있습니다.
 
-XPath 제약 조건을 만들 때 기억해야 할 사항은 다음과 같습니다:
+#### XPath 제약 조건을 만들 때 기억해야 할 사항은 다음과 같습니다:
 1. 도메인 모델에서 검색할 엔티티를 식별합니다.
 2. 해당 엔티티에서 데이터 제약에 사용할 속성(attributes) 및/또는 연관 관계(associations)까지의 경로를 식별합니다.
 3. 위의 빌딩 블록을 사용하여 XPath 표현식을 구성합니다.
 
-생활을 좀 더 쉽게 하기 위한 팁:
+#### 생활을 좀 더 쉽게 하기 위한 팁:
 1. 도메인 모델을 숙지하세요. 도메인 모델 구조에 익숙하지 않으면 올바른 경로를 선택하기 어려울 수 있습니다.
 2. 도메인 모델을 잘 정리하세요. 엔티티, 연관 관계, 속성을 이해하는 것이 쉽고 읽기 좋은 XPath 구성을 위한 핵심입니다.
     - 엔티티와 속성 이름은 그들이 나타내는 것을 설명해야 하며 기술적인 이름을 사용하지 않아야 합니다.
@@ -69,38 +69,38 @@ XPath 제약 조건을 만들 때 기억해야 할 사항은 다음과 같습니
 ## 퀴즈
 ### Question 1:
 Where in Mendix Studio Pro can you configure XPaths?
-Your answer: List Views
+#### Your answer: 
+List Views
 
-Other options and reasons:
-
-Text widgets (텍스트 위젯): XPaths는 텍스트 위젯에서 설정되지 않습니다. 텍스트 위젯은 페이지에 정적 또는 동적 텍스트를 표시하는 데 사용되지만, XPath 구성은 데이터 검색 및 제약 조건과 관련이 있습니다.
-Page access rules (페이지 접근 규칙): 페이지 접근 규칙은 사용자 권한과 데이터 가시성과 관련이 있지만, XPath를 직접 구성하는 것과는 관련이 없습니다.
-Navigation (네비게이션): 네비게이션 설정은 사용자가 페이지 간에 이동하는 방법을 결정하지만, XPath 구성을 포함하지 않습니다.
+#### Other options and reasons:
+- Text widgets (텍스트 위젯): XPaths는 텍스트 위젯에서 설정되지 않습니다. 텍스트 위젯은 페이지에 정적 또는 동적 텍스트를 표시하는 데 사용되지만, XPath 구성은 데이터 검색 및 제약 조건과 관련이 있습니다.
+- Page access rules (페이지 접근 규칙): 페이지 접근 규칙은 사용자 권한과 데이터 가시성과 관련이 있지만, XPath를 직접 구성하는 것과는 관련이 없습니다.
+- Navigation (네비게이션): 네비게이션 설정은 사용자가 페이지 간에 이동하는 방법을 결정하지만, XPath 구성을 포함하지 않습니다.
 
 ### Question 2:
 Which Widget feature utilizes XPaths?
-Your answer: Selectable data constraints on Reference Selectors
+#### Your answer: 
+Selectable data constraints on Reference Selectors
 
-Other options and reasons:
-
-Dynamic text in Labels (라벨의 동적 텍스트): 동적 텍스트를 가진 라벨은 XPaths를 사용하지 않습니다. 이들은 데이터나 변수에 따라 텍스트를 표시하지만, XPath 구성과는 관련이 없습니다.
-Styling properties of Action Buttons (액션 버튼의 스타일 속성): 스타일 속성은 버튼의 외관과 관련이 있으며, XPath 구성과는 관련이 없습니다.
-The tab index of a Group Box (그룹 박스의 탭 인덱스): 탭 인덱스는 그룹 박스 내에서의 탐색 순서와 관련이 있으며, XPath와는 관련이 없습니다.
+#### Other options and reasons:
+- Dynamic text in Labels (라벨의 동적 텍스트): 동적 텍스트를 가진 라벨은 XPaths를 사용하지 않습니다. 이들은 데이터나 변수에 따라 텍스트를 표시하지만, XPath 구성과는 관련이 없습니다.
+- Styling properties of Action Buttons (액션 버튼의 스타일 속성): 스타일 속성은 버튼의 외관과 관련이 있으며, XPath 구성과는 관련이 없습니다.
+- The tab index of a Group Box (그룹 박스의 탭 인덱스): 탭 인덱스는 그룹 박스 내에서의 탐색 순서와 관련이 있으며, XPath와는 관련이 없습니다.
 
 ### Question 3:
 Where can you utilize XPaths in microflows?
-Your answer: In the ‘Retrieve’ action
 
-Other options and reasons:
+#### Your answer:
+In the ‘Retrieve’ action
 
-In the input parameter (입력 매개변수): 입력 매개변수는 마이크로플로우에 전달되는 데이터를 정의하지만, XPath와는 관련이 없습니다.
-In the ‘Open page’ action (‘페이지 열기’ 액션): ‘페이지 열기’ 액션은 페이지 간 이동을 위해 사용되며, XPath를 사용하지 않습니다.
-In the ‘Commit’ action (‘커밋’ 액션): ‘커밋’ 액션은 데이터베이스에 변경 사항을 저장하는 데 사용되며, XPath 구성과는 관련이 없습니다.
-Summary of Correct Answers:
-
-List Views (리스트 뷰): XPaths는 리스트 뷰에서 구성되어 어떤 항목이 표시될지 정의합니다.
-Selectable data constraints on Reference Selectors (참조 선택기의 선택 가능한 데이터 제약): XPaths는 참조 선택기에서 선택할 수 있는 데이터를 필터링하는 데 사용됩니다.
-In the ‘Retrieve’ action (‘검색’ 액션에서): XPaths는 마이크로플로우의 ‘검색’ 액션에서 데이터베이스에서 가져올 데이터를 지정하는 데 사용됩니다.
+#### Other options and reasons:
+- In the input parameter (입력 매개변수): 입력 매개변수는 마이크로플로우에 전달되는 데이터를 정의하지만, XPath와는 관련이 없습니다.
+- In the ‘Open page’ action (‘페이지 열기’ 액션): ‘페이지 열기’ 액션은 페이지 간 이동을 위해 사용되며, XPath를 사용하지 않습니다.
+- In the ‘Commit’ action (‘커밋’ 액션): ‘커밋’ 액션은 데이터베이스에 변경 사항을 저장하는 데 사용되며, XPath 구성과는 관련이 없습니다.
+#### Summary of Correct Answers:
+- List Views (리스트 뷰): XPaths는 리스트 뷰에서 구성되어 어떤 항목이 표시될지 정의합니다.
+- Selectable data constraints on Reference Selectors (참조 선택기의 선택 가능한 데이터 제약): XPaths는 참조 선택기에서 선택할 수 있는 데이터를 필터링하는 데 사용됩니다.
+- In the ‘Retrieve’ action (‘검색’ 액션에서): XPaths는 마이크로플로우의 ‘검색’ 액션에서 데이터베이스에서 가져올 데이터를 지정하는 데 사용됩니다.
 
 
 
