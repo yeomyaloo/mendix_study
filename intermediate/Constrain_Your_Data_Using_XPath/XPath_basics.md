@@ -71,7 +71,10 @@ Mendix 플랫폼은 XPath 제약 조건을 구성할 때 자동 완성(auto-comp
 Where in Mendix Studio Pro can you configure XPaths?
 #### Your answer: 
 List Views
+#### 해설:
+English: XPaths can be configured in various places within Mendix Studio Pro, including list views. List views, such as Data Grids and List Views, allow you to set constraints to define which items are shown based on XPath queries. This helps filter the data displayed according to your needs.
 
+한국어: Mendix Studio Pro에서는 다양한 위치에서 XPaths를 구성할 수 있으며, 그 중 하나가 리스트 뷰(List Views)입니다. 데이터 그리드(Data Grids)와 리스트 뷰(List Views)와 같은 리스트 뷰에서 XPath 쿼리를 기반으로 표시할 항목을 정의하는 제약 조건을 설정할 수 있습니다. 이렇게 하면 필요에 따라 표시할 데이터를 필터링할 수 있습니다.
 #### Other options and reasons:
 - Text widgets (텍스트 위젯): XPaths는 텍스트 위젯에서 설정되지 않습니다. 텍스트 위젯은 페이지에 정적 또는 동적 텍스트를 표시하는 데 사용되지만, XPath 구성은 데이터 검색 및 제약 조건과 관련이 있습니다.
 - Page access rules (페이지 접근 규칙): 페이지 접근 규칙은 사용자 권한과 데이터 가시성과 관련이 있지만, XPath를 직접 구성하는 것과는 관련이 없습니다.
@@ -81,17 +84,27 @@ List Views
 Which Widget feature utilizes XPaths?
 #### Your answer: 
 Selectable data constraints on Reference Selectors
+#### 해설:
+English: Reference Selectors are widgets that use XPaths to determine which items are available for selection. The constraints you set in the Reference Selector ensure that only relevant items are shown to the user based on the XPath query.
+
+한국어: 참조 선택기(Reference Selectors)는 XPaths를 사용하여 선택 가능한 항목을 결정하는 위젯입니다. 참조 선택기에서 설정한 제약 조건은 XPath 쿼리를 기반으로 사용자에게 표시되는 항목이 관련된 것만 보이도록 보장합니다.
 
 #### Other options and reasons:
 - Dynamic text in Labels (라벨의 동적 텍스트): 동적 텍스트를 가진 라벨은 XPaths를 사용하지 않습니다. 이들은 데이터나 변수에 따라 텍스트를 표시하지만, XPath 구성과는 관련이 없습니다.
 - Styling properties of Action Buttons (액션 버튼의 스타일 속성): 스타일 속성은 버튼의 외관과 관련이 있으며, XPath 구성과는 관련이 없습니다.
 - The tab index of a Group Box (그룹 박스의 탭 인덱스): 탭 인덱스는 그룹 박스 내에서의 탐색 순서와 관련이 있으며, XPath와는 관련이 없습니다.
 
+
 ### Question 3:
 Where can you utilize XPaths in microflows?
 
 #### Your answer:
 In the ‘Retrieve’ action
+
+#### 해설:
+English: In microflows, XPaths are utilized in the ‘Retrieve’ action to specify which data should be retrieved from the database. By using XPath in the ‘Retrieve’ action, you can define criteria to fetch specific records that match your query.
+
+한국어: 마이크로플로우에서 XPaths는 ‘검색(Retrieve)’ 액션에서 사용되어 데이터베이스에서 어떤 데이터를 검색할지 지정합니다. ‘검색’ 액션에서 XPath를 사용하면 쿼리에 맞는 특정 레코드를 가져오기 위한 기준을 정의할 수 있습니다.
 
 #### Other options and reasons:
 - In the input parameter (입력 매개변수): 입력 매개변수는 마이크로플로우에 전달되는 데이터를 정의하지만, XPath와는 관련이 없습니다.
