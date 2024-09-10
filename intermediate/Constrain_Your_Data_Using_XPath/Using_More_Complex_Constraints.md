@@ -211,6 +211,5 @@ arduino
 ```
 - 이 XPath는 오늘 시작되는 VacationRequest가 없는 모든 계정, 또는 VacationRequest가 전혀 없는 계정 목록을 반환합니다. 이 쿼리는 오늘 출근한 모든 직원을 확인하는 데 사용될 수 있습니다.
 
-## 3. 빈 값 확인을 위한 XPath 사용(Perform an Empty Check Using XPaths)
 
 
