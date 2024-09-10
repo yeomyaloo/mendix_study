@@ -212,4 +212,55 @@ arduino
 - 이 XPath는 오늘 시작되는 VacationRequest가 없는 모든 계정, 또는 VacationRequest가 전혀 없는 계정 목록을 반환합니다. 이 쿼리는 오늘 출근한 모든 직원을 확인하는 데 사용될 수 있습니다.
 
 
+# 퀴즈
+## 영어
+### Question 1
+Let’s assume you add a new decimal attribute to the VacationRequest entity called ‘DaysUsed’. The value represents the total amount of days used for the requested vacation. If you write a microflow with a Retrieve action, what will be the return if we use the following XPath?
+[DaysUsed < 4.5 and not(VacationManagement.VacationRequest_Submitter/Administration.Account)]
 
+### Your Answer
+A list of all VacationRequests that are shorter than 4.5 days and do not have a Submitter assigned.
+
+### Explanation
+This XPath filters VacationRequest objects based on two conditions:
+
+DaysUsed < 4.5: It finds vacation requests that are shorter than 4.5 days.
+not(VacationManagement.VacationRequest_Submitter/Administration.Account): It finds requests that do not have a submitter assigned.
+Thus, the XPath returns only those vacation requests that satisfy both conditions.
+
+## 한국어 번역
+### 질문 1
+VacationRequest 엔티티에 ‘DaysUsed’라는 새로운 소수(decimal) 속성을 추가한다고 가정해 보겠습니다. 이 값은 요청된 휴가의 총 일수를 나타냅니다. Retrieve 액션이 있는 마이크로플로우를 작성할 때, 다음 XPath를 사용하면 반환되는 결과는 무엇인가요?
+[DaysUsed < 4.5 and not(VacationManagement.VacationRequest_Submitter/Administration.Account)]
+
+### 답변
+4.5일보다 짧고 제출자가 지정되지 않은 모든 VacationRequest 목록이 반환됩니다.
+
+### 설명
+이 XPath는 두 가지 조건을 기반으로 VacationRequest 객체를 필터링합니다:
+
+DaysUsed < 4.5: 4.5일보다 짧은 휴가 요청을 찾습니다.
+not(VacationManagement.VacationRequest_Submitter/Administration.Account): 제출자가 지정되지 않은 요청을 찾습니다.
+따라서 이 XPath는 두 조건 모두를 만족하는 휴가 요청만 반환됩니다.
+
+## 영어2
+### Question 2
+If we populate a DataGrid of VacationRequest entities with the following XPath constraint, what will happen?
+[StartDate = empty]
+
+### Your Answer
+The grid will show all VacationRequests where the StartDate is not populated.
+
+### Explanation
+This XPath finds objects where the StartDate attribute is empty, meaning it has no value set. Therefore, the DataGrid will display only those vacation requests where the StartDate field is empty.
+
+## 한국어 번역
+### 질문 2
+다음 XPath 제약조건을 사용하여 VacationRequest 엔티티의 DataGrid를 채우면 어떤 결과가 나타날까요?
+[StartDate = empty]
+
+### 답변
+StartDate가 채워지지 않은 모든 VacationRequest가 표시됩니다.
+
+### 설명
+이 XPath는 StartDate 속성이 비어 있는 객체를 찾습니다. 즉, 값이 설정되지 않은 경우입니다. 따라서 DataGrid는 StartDate 필드가 비어 있는 휴가 요청만 표시됩니다.
