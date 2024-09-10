@@ -62,7 +62,7 @@ By the end of this module, you will be able to:
 ### 1.2 예시를 통한 설명
 - 연관관계가 존재하는지 확인하는 표현식은 한 엔티티가 다른 엔티티와 연관관게를 맺고 있는지를 확인하는 것입니다.
 - Mendix에서는 특정 엔티티가 다른 엔티티와 관계를 맺고 있는지를 확인할 수 있습니다.
-#### 엔티티 구조도
+#### 1.2.1 엔티티 구조도
 ```plaintext
 VacationRequest
 +-------------------+
@@ -83,7 +83,7 @@ VacationRequest
 ```
 - VacationRequest: 휴가 요청을 나타내는 엔티티로, 상태(Status)와 시작 날짜(StartDate) 등의 속성을 가집니다.
 - Account: 휴가 요청의 승인자(Approver) 역할을 하는 계정을 나타내는 엔티티입니다
-#### 예시
+#### 1.2.2 예시
 ```xpath
 [VacationManagement.VacationRequest_Approver/Administration.Account]
 ```
@@ -94,12 +94,56 @@ VacationRequest
     - Account: 관리자의 계정 정보
 - 해당 표현식은 Approver(승인자)와 계정이 연결될 VacationRequest들을 반환합니다. 
 
-#### 예시2(연관관계가 존재하지 않음을 표현)
+#### 1.2.3 예시2(연관관계가 존재하지 않음을 표현)
 ```xpath
 [not(VacationManagement.VacationRequest_Approver/Administration.Account)]
 ```
 - 이 XPath는 VacationRequest 엔티티가 Approver와 연관관계가 없는 데이터를 반환합니다. 즉, 승인자가 지정되지 않은 휴가 요청들을 가져옵니다.
 - `not()` 함수는 조건을 부정합니다. 따라서 승인자(Approver)가 설정되지 않은 VacationRequest를 찾을 때 유용합니다.
+### 1.3 추가로 자바로 알아보는 멘딕스 Domain Model
+- 자바와 ORM 개념을 통해서 알아보는 멘딕스 도메인 모델의 의미를 알아보자.
+#### 1.3.1 Entity
+![image](https://github.com/user-attachments/assets/5dd4eb37-7075-403d-b3f4-fd479d858d8a)
+- 해당 붉은 선 안에 개념이 Entity이다.
+- 이때 당연하게 Account 역시 Entity이다.
+#### 정의
+- 엔티티는 애플리케이션에서 관리할 데이터의 단위를 나타냅니다. 각 엔티티는 특정 데이터 구조를 정의하며, 하나의 엔티티는 데이터베이스의 테이블과 유사한 개념입니다.
+#### 의의
+- 데이터 구조화: 엔티티는 데이터의 속성과 유형을 정의하며, 이는 데이터베이스에서 테이블의 역할을 합니다.
+- 비즈니스 로직: 엔티티는 비즈니스 로직을 구현하는 데 필요한 핵심 데이터 단위를 제공합니다. 예를 들어, VacationRequest 엔티티는 휴가 요청과 관련된 정보를 저장합니다.
+- 객체 간의 관계 정의: 엔티티는 다른 엔티티와의 관계를 정의하여 데이터의 연관성을 명확히 합니다.  
+#### 1.3.2 Association(연관관계)
+![image](https://github.com/user-attachments/assets/112564f0-c5ea-46e6-8041-419fe2f11138)
+#### 정의
+- 연관관계는 엔티티 간의 관계를 정의합니다. 이는 객체 간의 관계를 설정하여 데이터의 연관성을 모델링합니다.
+#### 의의
+- 데이터 통합: 연관관계는 서로 다른 엔티티 간의 데이터를 연결하여 통합된 정보를 제공합니다. 예를 들어, VacationRequest 엔티티는 Employee 엔티티와 연관될 수 있으며, 이를 통해 요청한 직원의 정보를 쉽게 가져올 수 있습니다.
+- 비즈니스 규칙 적용: 연관관계를 통해 비즈니스 규칙을 정의하고 데이터를 관리합니다. 예를 들어, VacationRequest 엔티티의 Approver 필드는 요청을 승인할 관리자와의 연관관계를 설정합니다.
+- 데이터 접근: 연관관계를 통해 다른 엔티티의 데이터를 쉽게 조회하고 처리할 수 있습니다. 예를 들어, VacationRequest 엔티티에서 VacationRequest_Approver 연관관계를 통해 해당 요청의 승인자를 참조할 수 있습니다.
+#### 1.3.3 자바 코드로 알아보자
+```
+// Define the VacationRequest entity
+public class VacationRequest {
+    private Account approver; // Represents the association to the Account entity
+    private Account submitter;
+    // Getter and Setter for approver
+    public Account getApprover() {
+        return approver;
+    }
+
+    public void setApprover(Account approver) {
+        this.approver = approver;
+    }
+}
+
+// Define the Account entity
+public class Account {
+    // Account fields and methods
+}
+
+```
+- ORM(그러니까 JPA기술 사용한 경우라고 생각하고 위의 클래스가 엔티티 클래스라면) 관점으로 살펴본다면 해당 작업은 저렇게 필드에 해당 Account를 넣고 ManyToOne 관계로 매핑을 해줬을 것이다.
+    - 하나의 계정(회원)은 여러개의 휴가 요청을 보낼수 있기 때문이다. 
 
 # XPath 함수
 - [XPath 함수 공식 문](https://docs.mendix.com/refguide9/xpath-constraint-functions/)
