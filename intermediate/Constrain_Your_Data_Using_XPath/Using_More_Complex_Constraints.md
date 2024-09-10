@@ -56,7 +56,117 @@ By the end of this module, you will be able to:
 
 # XPath 표현식
 - [XPath 표현식 공식 문서](https://docs.mendix.com/refguide/xpath-expressions/)
- 
+## 1. Exist Expression (존재 표현법)
+### 1.1 의의
+- 해당 표현법은 XPath를 사용해서 특정 연관관계(association)이나 속성(attribute)이 존재하는지, 즉 값이 설정되어 있는지를 확인하는 방법입니다.
+### 1.2 예시를 통한 설명
+- 연관관계가 존재하는지 확인하는 표현식은 한 엔티티가 다른 엔티티와 연관관게를 맺고 있는지를 확인하는 것입니다.
+- Mendix에서는 특정 엔티티가 다른 엔티티와 관계를 맺고 있는지를 확인할 수 있습니다.
+#### 엔티티 구조도
+```plaintext
+VacationRequest
++-------------------+
+| VacationRequest    |
+|-------------------|
+| Status             |
+| StartDate          |
++-------------------+
+         |
+         | VacationRequest_Approver
+         v
++-------------------+
+| Account (Approver)|
+|-------------------|
+| UserName          |
+| Role              |
++-------------------+
+```
+- VacationRequest: 휴가 요청을 나타내는 엔티티로, 상태(Status)와 시작 날짜(StartDate) 등의 속성을 가집니다.
+- Account: 휴가 요청의 승인자(Approver) 역할을 하는 계정을 나타내는 엔티티입니다
+#### 예시
+```xpath
+[VacationManagement.VacationRequest_Approver/Administration.Account]
+```
+- 이 표현법은 VacationRequest 엔티티에 Approver(승인자)로 설정된 Account가 있는지 확인하는 표현식입니다.
+- `VacationManagement.VacationRequest_Approver/Administration.Account`는 VacationRequest 엔티티에서 Approver 연관관계를 통해서 Account 엔티티로 연결된 것을 나타냅니다. 
+    - VacationRequest: 휴가 요청 데이터
+    - Approver: 휴가 요청을 승인하는 관리자
+    - Account: 관리자의 계정 정보
+- 해당 표현식은 Approver(승인자)와 계정이 연결될 VacationRequest들을 반환합니다. 
+
+#### 예시2(연관관계가 존재하지 않음을 표현)
+```xpath
+[not(VacationManagement.VacationRequest_Approver/Administration.Account)]
+```
+- 이 XPath는 VacationRequest 엔티티가 Approver와 연관관계가 없는 데이터를 반환합니다. 즉, 승인자가 지정되지 않은 휴가 요청들을 가져옵니다.
+- `not()` 함수는 조건을 부정합니다. 따라서 승인자(Approver)가 설정되지 않은 VacationRequest를 찾을 때 유용합니다.
+
 # XPath 함수
 - [XPath 함수 공식 문](https://docs.mendix.com/refguide9/xpath-constraint-functions/)
+
+# 함수와 연산자를 사용하여 제약하기 (Constrain Usong Functions and Operators)
+## 1. 설명
+이전 강의에서 함수와 연산자에 대해 배웠습니다. 이를 이번 사용 사례에 어떻게 적용할 수 있을지 살펴보겠습니다:
+### 1.1 시나리오
+- 회사는 연간 단위로 휴가를 관리하며, 지난 해 동안 승인된 휴가 요청에 대한 통찰을 얻고 싶어합니다.
+- 이를 위해 홈 페이지에 새 탭을 추가하여 해당 연도 초부터 승인된 휴가 요청을 표시합니다.
+- 일반 사용자에게는 자신이 요청한 휴가만 보이도록 하고, 관리자와 관리자 권한을 가진 사용자에게는 회사 전체의 요청이 보이도록 합니다.
+- 하지만 이를 수행하기 전에 관리자들이 휴가 요청을 승인할 수 있는 절차를 제공해야 합니다!
+### 1.2 시나리오 수행 단계
+- 이 작업을 수행하기 위한 단계는 다음과 같습니다:
+    - 관리자들을 위한 '승인' 프로세스 추가
+    - 홈 페이지에 휴가 요청 데이터를 표시하는 탭 추가
+    - 그리드에 있는 객체를 ‘승인’ 상태이고, 시작일이 해당 연도 초보다 이후인 요청으로 제한
+    - 이후 강의에서 위의 각 단계를 어떻게 수행하는지에 대한 지침을 제공합니다.
+## 2. 사용법 (모두다 표시 x) 
+![image](https://github.com/user-attachments/assets/12cdcbf3-ae39-4561-a9e3-d25c249084ee) </br>
+- 해당 마이크로플로우 작업이 끝나면 보안 설정을 해줘야하는데 이때 마이크로플로우 창 아무곳이나 오른쪽 클릭을 한 뒤에 properties를 눌러서 설정에 들어가 보안을 설정하면 된다.
+
+## 3. 시나리오2
+### 3.1 시나리오(홈 페이지에 새 탭 추가하기)
+다음으로 승인된 휴가 요청이 표시될 탭을 추가해야 합니다. 이를 위해 다음 단계를 따르세요:
+1. App Explorer를 사용하여 Home_Web을 엽니다.
+2. 기존 ‘Submitted’ 탭을 마우스 오른쪽 버튼으로 클릭하고 Add tab page right를 선택합니다.
+3. 이 탭을 더블 클릭하여 Approved this year와 같은 의미 있는 이름으로 변경합니다.
+4. 이 탭에 VacationRequest 객체의 Data Grid를 추가합니다. Data View의 내용 자동 채우기 옵션을 선택하세요.
+
+# 빈 값 확인하기 (Checking for Empty Values)
+## 1. 설명
+- 지금까지 특정 필드의 값을 확인하여 XPath 제약조건을 작성했습니다.
+- 그러나 값이 할당되지 않은 엔티티를 찾으려면 상황이 더 복잡해집니다. 예를 들어, 현재 사용자와 연결되지 않은 모든 VacationRequest를 검색하려면 어떻게 해야 할까요? Mendix 플랫폼은 이러한 쿼리를 쉽게 할 수 있도록 도와주는 함수들을 제공합니다.
+
+## 2. empty
+- 어떤 속성이나 연관관계에 값이 없을 때, 플랫폼은 empty 값을 사용하여 이를 확인할 수 있습니다.
+
+### 2.1 예시:
+```
+arduino
+//VacationManagement.VacationRequest[Status = empty]
+```
+- 이 XPath는 Status에 값이 할당되지 않은 VacationRequest 목록을 반환합니다.
+
+`not()`</br>
+`empty` 확인 외에도, Mendix 플랫폼에는 조건이 충족되지 않았는지 확인할 수 있는 `not()` 함수가 있습니다. 이 함수는 연산자와 속성을 사용하여 만든 표현식을 평가하는 데 사용할 수 있습니다.
+
+```css
+코드 복사
+//VacationManagement.VacationRequest[not(StartDate > '[%BeginOfCurrentDay%]')]
+```
+- 이 XPath는 StartDate가 오늘 이후가 아닌 VacationRequest 목록을 반환합니다. 즉, 오늘 이전에 발생한 휴가 요청들이 반환됩니다.
+- 이 함수는 연관관계가 설정되지 않았는지 평가하는 데에도 사용할 수 있습니다.
+
+```arduino
+코드 복사
+//VacationManagement.VacationRequest[not(VacationRequest_Submitter)]
+```
+- 이 XPath는 submitter 계정과 연결되지 않은 모든 VacationRequest를 반환합니다.
+
+```css
+코드 복사
+//Administration.Account[not(VacationRequest/VacationRequest.StartDate = '[%BeginOfCurrentDay%]')]
+```
+- 이 XPath는 오늘 시작되는 VacationRequest가 없는 모든 계정, 또는 VacationRequest가 전혀 없는 계정 목록을 반환합니다. 이 쿼리는 오늘 출근한 모든 직원을 확인하는 데 사용될 수 있습니다.
+
+## 3. 빈 값 확인을 위한 XPath 사용(Perform an Empty Check Using XPaths)
+
 
