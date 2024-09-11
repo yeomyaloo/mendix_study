@@ -207,4 +207,40 @@
 ### 4.7 저장 및 취소 버튼 추가
 1. Data View footer에 Save 및 Cancel 버튼을 추가합니다.
 2. Save 버튼은 Administration 모듈의 기존 SaveNewAccount 마이크로플로우를 트리거합니다.
-Cancel 버튼은 변경 사항을 취소합니다.
+3. Cancel 버튼은 변경 사항을 취소합니다.
+
+
+## 5. 새 팀 구성원 버튼 구성 – 세부 페이지 구축
+### 5.1 시나리오
+Andrea가 새로운 팀 구성원을 생성할 수 있도록, New Team Member 버튼을 기능적으로 만드는 것이 필요합니다. 이를 통해 Andrea가 팀 구성원을 생성할 수 있도록 설정을 진행합니다.
+
+### 5.2 설정 방법
+1. TeamMember_Overview_Administrator 페이지에서 New Team Member 버튼의 클릭 액션을 설정합니다.
+    - 클릭 시 수행할 작업을 microflow 호출로 설정합니다.
+2. 새로운 microflow를 생성하고 이름을 ACT_TeamMember_Create로 지정합니다.
+3. microflow 안에서 다음 단계를 추가합니다
+    1. 새로운 ProfilePicture 객체를 생성합니다.
+    2. 새로운 TeamMember 객체를 생성하고 이를 ProfilePicture 객체에 연결합니다.
+    3. 새로운 AccountPasswordData 객체를 생성하고 이를 TeamMember 객체에 연결합니다.
+    4. TeamMember_New_Administrator 페이지를 열고 AccountPasswordData 객체를 전달합니다.
+   ![image](https://github.com/user-attachments/assets/5c24db52-9e5d-470d-b15a-0b39da7cf355)
+4. Administrator 역할에 해당 microflow에 대한 접근 권한을 부여합니다.
+
+## 6. 세부 페이지 구축 – 편집 페이지 생성(Build the Detail Pages – Create the Edit Page)
+### 6.1 시나리오
+Andrea가 팀 구성원 정보를 편집할 수 있는 페이지는 새로운 팀 구성원을 생성하는 페이지와 거의 동일합니다. 이제 새 페이지를 복제하고 필요한 부분을 변경해보겠습니다.
+
+### 6.2 단계별 작업
+1. TeamMember_New_Administrator 페이지를 복제하고 이름을 TeamMember_Edit_Administrator로 변경합니다.
+2. 다음 이미지에 따라 페이지를 필요한 부분만 수정합니다
+    - Expenses 모듈에 있는 TeamMember 엔티티로 페이지 파라미터를 설정합니다.
+    - AccountPasswordData 페이지 파라미터를 삭제합니다.
+    - Active Switch 위젯 아래에 Change Password 버튼을 추가하고 캡션을 "Change Password"로 설정합니다. 이 버튼은 Administration 모듈의 User Management > Admin 아래에 있는 ShowPasswordForm 마이크로플로우를 호출합니다.
+    - Page Explorer를 사용하여 TeamMember 객체를 보여주는 내부 데이터 뷰를 AccountPasswordData 데이터 뷰 외부로 이동합니다.
+    - 데이터 뷰의 페이지 파라미터를 TeamMember로 구성합니다.
+    - AccountPasswordData 데이터 뷰와 하단의 텍스트 입력 위젯 두 개가 있는 레이아웃 그리드를 삭제합니다.
+    - TeamMember 데이터 뷰의 하단에 Save 및 Cancel 버튼을 재생성합니다. 남은 데이터 뷰에서 푸터가 보이도록 설정해야 할 수 있습니다.
+    - Save 버튼은 기본 저장 작업을 수행합니다.
+      ![image](https://github.com/user-attachments/assets/1ecc0d51-ef37-45da-8236-f23c8b3fb16c)
+3. 팀 구성원 개요 페이지의 Edit 버튼을 이 페이지에 연결합니다.
+4. Administrator에게 페이지 접근 권한을 부여합니다.
