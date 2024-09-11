@@ -3,8 +3,11 @@
 Intermediate Developer Certification 관련 강의 이름은 아래와 같습니다. 
 
 # Intermediate Level
-- Unlocking True Collaboration
-    - 애자일과 관련해서 이 챕터에서 많이 다룸 
+- [Unlocking True Collaboration](https://github.com/yeomyaloo/mendix_study/tree/main/intermediate/Unlocking_True_Collaboration)
+    - 애자일과 관련해서 이 챕터에서 많이 다룸
+    - [스크럼](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/SCRUM.md)
+    - [App directory](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/App_Directory.md)
+    - [버전 관리](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/Using_Version_Management.md)
 - Constrain Your Data Using Xpath
 - Create an App with Advanced Page Building
 - Building an Event App using Microflows
