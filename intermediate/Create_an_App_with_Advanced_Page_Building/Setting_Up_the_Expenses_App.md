@@ -244,3 +244,48 @@ Andrea가 팀 구성원 정보를 편집할 수 있는 페이지는 새로운 �
       ![image](https://github.com/user-attachments/assets/1ecc0d51-ef37-45da-8236-f23c8b3fb16c)
 3. 팀 구성원 개요 페이지의 Edit 버튼을 이 페이지에 연결합니다.
 4. Administrator에게 페이지 접근 권한을 부여합니다.
+
+# 퀴즈 
+## Question 1
+What is the correct way of structuring resources within the App Explorer?
+
+Your answer: Manually
+
+번역: 앱 탐색기 내에서 리소스를 구성하는 올바른 방법은 무엇인가요?
+
+답변: 수동으로
+
+해설: 앱 탐색기에서 리소스를 구성하는 방법은 수동으로 폴더와 서브폴더를 추가하고 각 기능이나 엔티티와 관련된 문서들을 적절히 배치하는 것입니다. 올바르게 폴더를 구조화하면 유지보수 및 개발 속도를 높일 수 있습니다.
+
+## Question 2
+When structuring the App Explorer, which of the following subfolders would be the best choice to store things like Enumerations and Regular Expressions?
+
+Your answer: Resources
+
+번역: 앱 탐색기를 구조화할 때, Enumerations(열거형)과 Regular Expressions(정규 표현식)과 같은 항목을 저장하는 데 가장 적합한 서브폴더는 무엇인가요?
+
+답변: Resources
+
+해설: 열거형, 정규 표현식과 같은 공통적인 리소스는 Resources 폴더에 저장하는 것이 좋습니다. 이는 이러한 리소스가 특정 프로세스나 엔티티에 속하지 않으며, 여러 곳에서 사용되기 때문에 적절하게 분류해두면 찾기 쉽습니다.
+
+## Question 3
+How can you connect a profile picture to the account of a team member in a way that allows the picture to be altered?
+
+Your answer: Create a ProfilePicture entity and configure the Image entity in the System module as its generalization.
+
+번역: 프로필 사진을 팀 구성원의 계정에 연결하고, 이 사진이 변경 가능하도록 하려면 어떻게 해야 하나요?
+
+답변: ProfilePicture 엔티티를 생성하고 System 모듈의 Image 엔티티를 그 일반화로 설정합니다.
+
+해설: 사진을 변경 가능하게 만들기 위해서는 ProfilePicture라는 새로운 엔티티를 만들고, 이를 System 모듈의 Image 엔티티에서 상속받도록 구성합니다. 이렇게 하면 사용자는 프로필 사진을 쉽게 변경할 수 있습니다.
+
+## Question 4
+Which widget needs to be used inside of a List View for visualizing a dynamic image?
+
+Your answer: Dynamic Image
+
+번역: 동적 이미지를 시각화하기 위해 List View 내에서 어떤 위젯을 사용해야 하나요?
+
+답변: Dynamic Image 위젯
+
+해설: 동적 이미지를 표시하려면 Dynamic Image 위젯을 사용해야 합니다. 이 위젯은 데이터베이스의 이미지 데이터를 연결하여 각 사용자나 항목에 대해 다른 이미지를 표시할 수 있도록 합니다.
