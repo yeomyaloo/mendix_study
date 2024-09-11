@@ -268,6 +268,12 @@ Your answer: Resources
 
 해설: 열거형, 정규 표현식과 같은 공통적인 리소스는 Resources 폴더에 저장하는 것이 좋습니다. 이는 이러한 리소스가 특정 프로세스나 엔티티에 속하지 않으며, 여러 곳에서 사용되기 때문에 적절하게 분류해두면 찾기 쉽습니다.
 
++ Domain Model에 Enum이 들어가지 않는 이유는 도메인 모델 핵심 데이터 구조와 다르게 일반적으로 여러 프로세스나 엔티티에서 사용되기 때문이다.
++ 열거형은 특정 엔티티의 속성(Attribute)과 직접적으로 연결될 수 있지만 도메인 모델에 포함된 엔티티 자체라기보다는 데이터 검증 및 선택을 지원하는 **보조적인 리소스**에 가깝습니다. 또한 마찬가지로 정규 표현식은 특정 데이터 패턴을 검증하는 데 사용되며, 엔티티 구조와는 직접적인 관계가 없습니다.
++ 요약하자면:
+    - 도메인 모델은 핵심 데이터 구조를 정의.
+    - Resources는 여러 프로세스나 엔티티에 걸쳐 사용되는 도구적인 리소스를 저장.
+
 ## Question 3
 How can you connect a profile picture to the account of a team member in a way that allows the picture to be altered?
 
