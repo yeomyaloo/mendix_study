@@ -184,5 +184,88 @@ Atlas UI는 기본적으로 세 가지 내비게이션 레이아웃을 제공합
 
 7. **각 사용자 역할에 새로 생성한 로그인 페이지에 대한 접근 권한을 부여합니다.**
 
+# 로그인 페이지 디자인하기(Designing the Login Page)
+1. **로그인 페이지 열기**
 
+2. **불필요한 요소 제거하기:**
+   - 페이지에서 데이터 뷰 위젯을 찾습니다.
+   - 데이터 뷰 위젯을 선택하고 삭제합니다. 이 위젯은 커스텀 로그인 디자인에 필요하지 않습니다.
+
+3. **페이지 헤더 제목 업데이트하기:**
+   - 페이지 헤더를 클릭합니다.
+   - 속성 창에서 제목 텍스트를 `Welcome to North Sea Shipbuilders Expenses`로 업데이트합니다.
+
+4. **보조 텍스트 업데이트하기:**
+   - 보조 텍스트 영역을 클릭합니다.
+   - 텍스트를 `Use this app to get your expense requests approved!`로 변경합니다.
+
+5. **컨테이너 스타일링하기:**
+   - 텍스트 위젯이 포함된 컨테이너를 클릭합니다.
+   - 속성 창에서 `Styling` 섹션으로 이동합니다.
+   - `Align content` 속성을 `Left align as a column`으로 설정합니다.
+
+6. **검증 메시지 위젯 추가하기:**
+   - 데이터 뷰를 제거한 컨테이너에 `Validation message` 위젯을 드래그하여 배치합니다. 이 위젯은 로그인 검증 오류를 표시하는 데 사용됩니다.
+
+7. **로그인 폼 위젯 추가하기:**
+   - `Login id`용 `Text box` 위젯을 드래그하여 컨테이너 아래에 배치합니다.
+   - `Password`용 `Text box` 위젯을 `Login id` 텍스트 박스 아래에 배치합니다.
+
+8. **로그인 버튼 구성하기:**
+   - `Password` 텍스트 박스 아래에 `Button` 위젯을 드래그하여 배치합니다.
+   - 버튼을 다음과 같이 설정합니다:
+     - **General Tab:**
+       - `Button style`을 `Primary`로 설정합니다.
+       - `Validation message widget`을 `ValidationMessage1`로 설정합니다 (이 이름이 검증 메시지 위젯의 이름과 일치해야 합니다).
+     - **Appearance Tab:**
+       - `Class`를 `btn-block btn-rounded`로 설정합니다.
+
+### 결과
+이제 로그인 페이지는 다음과 같이 표시됩니다:
+![image](https://github.com/user-attachments/assets/3ca6e3a0-32e5-4584-9f19-d4c1da5b76f6)
+
+# 익명 사용자 등록 허용하기
+## 1. 시나리오
+현재는 이미 계정이 있는 직원들이 앱에 로그인할 수 있지만, Andrea는 계정이 없는 직원들도 스스로 계정을 만들 수 있기를 원합니다. 이를 위해 몇 가지 중요한 사항이 있습니다:
+- 익명 사용자는 데이터에 접근할 수 없어야 합니다.
+- Andrea는 오직 North Sea Shipbuilders의 직원만 가입할 수 있도록 보장해야 합니다.
+- 가입 후, 직원들은 로그인 페이지로 돌아가 로그인할 수 있어야 합니다.
+
+## 2. 예제
+### 2.1 새로운 하위 폴더 생성
+1. `Anonymous Users` 폴더에 `Microflows`라는 새 하위 폴더를 만듭니다.
+
+### 2.2 도메인 모델 확장
+1. 새로운 `Registration` 엔터티를 도메인 모델에 추가합니다.
+   - 이 엔터티는 비영속적이어야 하며, 객체의 정보는 데이터베이스에 저장되기 전에 `Account` 객체로 복사됩니다.
+   - 다음과 같은 문자열 속성이 필요합니다: `FullName`, `UserName`, `EmailAddress`, `Password`, `ConfirmPassword`.
+   - 익명 사용자에게 모든 속성에 대한 읽기 및 쓰기 권한을 부여합니다.
+   - 익명 사용자에게 생성 권한을 부여합니다.
+
+### 2.3 로그인 페이지에 '가입하기' 섹션 추가
+1. 로그인 페이지에서 `Sign in` 버튼 아래에 레이아웃 그리드를 추가합니다.
+   - 레이아웃 그리드의 클래스는 `spacing-inner-large`로 설정합니다.
+2. 새로 생성된 레이아웃 그리드에 컨테이너를 추가하고 `Align content`를 `Center align as a column`으로 설정합니다.
+3. 컨테이너에 텍스트 위젯과 버튼 위젯을 추가합니다. 다음 이미지를 참조하여 위젯을 구성합니다.
+4. `Sign up here!` 버튼을 클릭하면 새로운 객체가 생성되도록 합니다.
+   - `Registration` 엔터티를 객체가 생성될 엔터티로 선택합니다.
+   - `Registration_New`이라는 새로운 팝업 페이지를 생성하고 `Anonymous Users > Pages` 폴더에 저장합니다.
+   - 익명 사용자에게 페이지 접근 권한을 부여합니다.
+
+### 2.4 `Registration_New` 페이지 설정
+1. 비밀번호 필드 두 개의 속성을 `Show as password`로 설정합니다.
+2. `Save` 버튼의 캡션을 `Create my account`로 변경합니다.
+3. `Create my account` 버튼의 클릭 동작을 마이크로플로우 호출로 설정합니다.
+
+### 2.5 마이크로플로우 생성
+1. `ACT_Registration_CreateTeamMember`라는 새 마이크로플로우를 생성하고 `Anonymous Users` 폴더의 `Microflows` 하위 폴더에 저장합니다.
+   - 익명 사용자에게 마이크로플로우 접근 권한을 부여합니다.
+
+2. 마이크로플로우를 다음 이미지와 같이 빌드합니다:
+   ![Microflow Diagram](이미지_링크)
+
+   (이미지는 실제 이미지 링크로 교체해야 합니다)
+
+## 3. 추가 정보
+- 보통, 이 기능에 이메일로 전송되는 인증 링크를 추가하여 North Sea Shipbuilders의 직원만 계정을 만들 수 있도록 하는 방법을 확장합니다. 이 방법은 `@shipbuildersinc.com` 이메일 주소만 허용하는 정규 표현식과 결합되어 직원만 가입할 수 있도록 합니다.
 
