@@ -269,3 +269,71 @@ Atlas UI는 기본적으로 세 가지 내비게이션 레이아웃을 제공합
 ## 3. 추가 정보
 - 보통, 이 기능에 이메일로 전송되는 인증 링크를 추가하여 North Sea Shipbuilders의 직원만 계정을 만들 수 있도록 하는 방법을 확장합니다. 이 방법은 `@shipbuildersinc.com` 이메일 주소만 허용하는 정규 표현식과 결합되어 직원만 가입할 수 있도록 합니다.
 
+# 퀴즈
+**Question 1:**
+Which of the following options is used for featuring the navigation menu in a sidebar?
+
+- **Atlas Sidebar**
+- Atlas Topbar
+- Popup
+- Atlas Default
+
+**해석:**
+사이드바에 내비게이션 메뉴를 표시하는 데 사용되는 옵션은 무엇인가요?
+
+**해설:**
+- **Atlas Sidebar**: 사이드바에 내비게이션 메뉴를 표시하는 레이아웃입니다. 사이드바는 페이지의 측면에 위치하여 메뉴를 보여줍니다.
+- Atlas Topbar: 상단 바에 내비게이션 메뉴를 표시합니다.
+- Popup: 팝업 페이지 형태로 내비게이션을 제공합니다.
+- Atlas Default: 사이드바 또는 상단 바를 포함할 수 있지만, 사이드바를 특정으로 하지 않습니다.
+
+**Question 2:**
+Which of the following terms refers to the empty areas that form the canvas for any pages that make use of the layout?
+
+- Placeholders
+- Layout grid
+- Contents
+- Scroll containers
+
+**해석:**
+레이아웃을 사용하는 페이지의 캔버스를 형성하는 빈 영역을 무엇이라고 하나요?
+
+**해설:**
+- **Placeholders**: 레이아웃에서 페이지가 사용될 빈 영역입니다. 이 영역은 페이지의 내용이 들어갈 수 있는 공간을 제공합니다.
+- Layout grid: 페이지 레이아웃의 구조를 정의하는 그리드입니다.
+- Contents: 레이아웃에 포함되어 있는 실제 내용입니다.
+- Scroll containers: 스크롤 가능한 영역을 정의하는 컨테이너입니다.
+
+**Question 3:**
+When a layout is based on another layout, which of the mentioned option refers to the parent layout?
+
+- Main layout
+- Placeholder layout
+- Master layout
+- Template layout
+
+**해석:**
+레이아웃이 다른 레이아웃을 기반으로 할 때, 부모 레이아웃을 무엇이라고 하나요?
+
+**해설:**
+- **Master layout**: 부모 레이아웃을 의미합니다. 하위 레이아웃이 이 레이아웃을 기반으로 해서 더욱 전문화된 구성을 만들 수 있습니다.
+- Main layout: 일반적으로 사용되는 레이아웃을 의미하지만, 부모 레이아웃을 특정하지는 않습니다.
+- Placeholder layout: 레이아웃에서 빈 영역을 정의하는 것이며, 부모 레이아웃과는 관계가 없습니다.
+- Template layout: 레이아웃의 특정 유형을 의미할 수 있지만, 부모 레이아웃의 개념과는 다릅니다.
+
+**Question 4:**
+Which of the principles needs to be utilized to reduce duplication of already created elements?
+
+- TRY
+- FLY
+- BUY
+- **DRY**
+
+**해석:**
+이미 생성된 요소의 중복을 줄이기 위해 어떤 원칙을 사용해야 하나요?
+
+**해설:**
+- **DRY (Don’t Repeat Yourself)**: 이미 생성된 요소의 중복을 줄이기 위해 사용되는 원칙입니다. 중복을 피하고 재사용성을 높이는 것이 목표입니다.
+- TRY: 중복 방지와는 관련이 없습니다.
+- FLY: 중복 방지 원칙과는 관계가 없습니다.
+- BUY: 중복 방지와는 관련이 없습니다.
