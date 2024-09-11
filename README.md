@@ -12,7 +12,9 @@ Intermediate Developer Certification 관련 강의 이름은 아래와 같습니
     - [XPath Basics](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/XPath_basics.md)
     - [Using Simple Constraints](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/Using_Simple_Constraints.md)
     - [Using More Complex Constraints](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/Using_More_Complex_Constraints.md)
-- Create an App with Advanced Page Building
+- [Create an App with Advanced Page Building](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Create_an_App_with_Advanced_Page_Building)
+    - [Setting Up the Expenses App](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Create_an_App_with_Advanced_Page_Building/Setting_Up_the_Expenses_App.md)
+    - [Branding](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Create_an_App_with_Advanced_Page_Building/Branding.md)
 - Building an Event App using Microflows
 - Expand Your Domain Modeling Skills
 
