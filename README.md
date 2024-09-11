@@ -8,7 +8,10 @@ Intermediate Developer Certification 관련 강의 이름은 아래와 같습니
     - [스크럼](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/SCRUM.md)
     - [App directory](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/App_Directory.md)
     - [버전 관리](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/Using_Version_Management.md)
-- Constrain Your Data Using Xpath
+- [Constrain Your Data Using Xpath](https://github.com/yeomyaloo/mendix_study/tree/main/intermediate/Constrain_Your_Data_Using_XPath)
+    - [XPath Basics](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/XPath_basics.md)
+    - [Using Simple Constraints](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/Using_Simple_Constraints.md)
+    - [Using More Complex Constraints](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Constrain_Your_Data_Using_XPath/Using_More_Complex_Constraints.md)
 - Create an App with Advanced Page Building
 - Building an Event App using Microflows
 - Expand Your Domain Modeling Skills
