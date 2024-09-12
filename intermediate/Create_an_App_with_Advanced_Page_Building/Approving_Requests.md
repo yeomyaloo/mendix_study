@@ -22,6 +22,8 @@
    - 상태(Status) = Approved (탭 2)
    - 상태(Status) = Rejected (탭 3)
 다음 이미지는 첫 번째 탭에 대해 제약 조건을 추가한 방법을 보여줍니다. 또한 데이터 그리드의 내용을 자동으로 채웁니다.
+![image](https://github.com/user-attachments/assets/e8556dea-ce61-4ddc-8e48-3c2222abf19c)
+
 6. 각 데이터 그리드 위젯의 상단에 최신 요청을 표시하도록 createdDate(내림차순)를 기준으로 정렬을 적용합니다. (이 작업을 수행하려면 구조 모드(Structure mode)로 전환하고 데이터 그리드에서 정렬 순서(Sort order)를 더블 클릭해야 합니다).
 7. 각 데이터 그리드 위젯에서 Status 열을 삭제합니다. 이 정보는 여기서 관련이 없습니다.
 8. 각 데이터 그리드 위젯에서 New, Edit, Delete 버튼을 제거합니다. 재무 직원들은 요청을 승인하거나 거절할 수만 있어야 합니다.
