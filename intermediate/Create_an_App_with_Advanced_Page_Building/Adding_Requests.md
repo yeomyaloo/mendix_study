@@ -82,7 +82,7 @@
      - 데이터 뷰의 내용을 자동으로 채우지 않습니다.
      - 데이터 뷰의 내용을 비웁니다.
 
-## 2.  마법사에 내비게이션 추가하기
+## 2. 마법사에 내비게이션 추가하기
 ### 2.1 필요성
 - 마법사에서 중요한 것은 사용자가 다음 단계로 어떻게 이동할지, 어떤 데이터를 전달할지, 그리고 언제 데이터를 데이터베이스에 저장할지를 고려하는 것입니다.
 ### 2.2 순서
@@ -296,10 +296,8 @@ You want to re-use a header on multiple pages, which of the following options ca
 **Reason:** Snippets are reusable pieces of UI that can be used across multiple pages. If the content of a snippet is changed, the changes are reflected throughout the app wherever the snippet is used.
 
 ---
-
 ### Question 2:
 Which of the following widgets can be used to select associated objects, when multiple select is possible?
-
 - Drop-down
 - Reference selector
 - Reference set selector
@@ -310,10 +308,8 @@ Which of the following widgets can be used to select associated objects, when mu
 **Reason:** The Reference Set Selector widget is specifically designed for selecting multiple associated objects. It supports many-to-many ( * - * ) associations, unlike the Reference Selector, which is limited to selecting a single object.
 
 ---
-
 ### Question 3:
 From the buttons on a Data Grid widget that work with single select mode, which ones need to be configured with multi-select mode?
-
 - New, Edit, Delete
 - Edit, Delete
 - New, Delete
@@ -324,10 +320,8 @@ From the buttons on a Data Grid widget that work with single select mode, which 
 **Reason:** While the "New" button works regardless of selection mode, both "Edit" and "Delete" buttons require configuration for multi-selection mode because, by default, they are designed to work with a single selection. In multi-select mode, custom microflows are needed to handle editing or deleting multiple objects.
 
 ---
-
 ### Question 4:
 Where should you configure that only selected roles are allowed to see a container on a page?
-
 - In the User tab of the Project security.
 - In the Page Access tab of the Module Security.
 - In the Navigation visibility property of the Page.
