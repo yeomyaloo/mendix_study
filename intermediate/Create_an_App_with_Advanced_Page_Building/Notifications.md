@@ -1,4 +1,4 @@
-# 학습 목표
+![image](https://github.com/user-attachments/assets/cbe695be-105d-4e1f-9617-2c192130a260)# 학습 목표
 이 모듈을 완료하면, 다음을 할 수 있습니다:
 - 앱에 알림 모듈을 추가하고 보안 및 접근 권한을 설정합니다.
 - 앱에서 알림을 생성, 승인, 거부하는 기능을 구축합니다.
@@ -65,13 +65,18 @@
 2. **Finalize request** 버튼의 클릭 시 동작을 **Call a microflow**로 변경합니다.
 3. 새 마이크로플로우를 생성합니다: **ACT_Request_Save**.
 4. 요청자에게 마이크로플로우 접근 권한을 부여합니다.
-5. 먼저, 저장 버튼의 기본 동작을 모방하여 객체를 커밋하고 페이지를 닫습니다.
-6. 데이터베이스에서 모든 승인자를 검색합니다.
-7. 데이터베이스에서 요청자를 검색하여, 메시지에서 그의 **FullName**을 사용할 수 있도록 합니다.
+5. 먼저, 저장 버튼의 기본 동작을 모방하여 객체를 커밋하고 페이지를 닫습니다.![image](https://github.com/user-attachments/assets/2c8d426a-61b9-45f0-98ae-201ff932062f)
+6. 데이터베이스에서 모든 승인자를 검색합니다.(`[System.UserRoles/System.UserRole/Name = 'Approver']`)![image](https://github.com/user-attachments/assets/ff10af44-4d7c-49a7-b848-7c728477fe85) 
+7. 데이터베이스에서 요청자를 검색하여, 메시지에서 그의 **FullName**을 사용할 수 있도록 합니다.(`[id=$Request/System.owner]
+`)![image](https://github.com/user-attachments/assets/e917fe77-29a6-4786-8181-5d5c74976424)
 8. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.
+   - Title: 'Request created on' + formatDateTime($Request/createdDate,'MM/dd/yyyy')
+   - AssociatedObject: $Request/RequestId
+   - ![image](https://github.com/user-attachments/assets/38006a3c-d203-4531-bc42-d02f8ab3d85b)
 
 ### 2.3 생성 알림 마이크로플로우
 이제 마이크로플로우는 다음과 같은 모습일 것입니다:
+![image](https://github.com/user-attachments/assets/38bc9193-6ba2-445e-9ada-dab43dfba23d)
 
 ## 3. 승인 알림
 ### 3.1 알림이 승인될 때
@@ -97,7 +102,6 @@
 ## 4. 거절 알림
 ### 4.1 알림이 거절될 때
 요청이 승인자에 의해 거절될 때, 요청을 생성한 요청자가 알림을 받아야 합니다. 이 경우, 승인자는 요청이 거절된 이유를 설명하는 메시지를 추가할 수 있어야 합니다.
-
 ### 4.2 거절 알림 만드는 방법
 1. **Act_Request_StatusRejected** 마이크로플로우를 엽니다.
 2. 기존 활동 전에 요청자를 검색합니다.
