@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cbe695be-105d-4e1f-9617-2c192130a260)# 학습 목표
+# 학습 목표
 이 모듈을 완료하면, 다음을 할 수 있습니다:
 - 앱에 알림 모듈을 추가하고 보안 및 접근 권한을 설정합니다.
 - 앱에서 알림을 생성, 승인, 거부하는 기능을 구축합니다.
@@ -72,6 +72,8 @@
 8. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.
    - Title: 'Request created on' + formatDateTime($Request/createdDate,'MM/dd/yyyy')
    - AssociatedObject: $Request/RequestId
+   - Notifications.Notification_Account: `$ApproverList`
+   - Message: `$Requestor/FullName + 'created a new request;' + $Request/Title + '. Please check this request and approve or reject it.'`
    - ![image](https://github.com/user-attachments/assets/38006a3c-d203-4531-bc42-d02f8ab3d85b)
 
 ### 2.3 생성 알림 마이크로플로우
@@ -97,10 +99,18 @@
    - 출력 객체 이름을 **Approver**로 설정합니다.
 4. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.
 ![image](https://github.com/user-attachments/assets/ead3a24e-96f6-4a3a-9728-539a0bf73418)
+- Title: `'you request has been approved.'`
+- Message: `Dear'+$Requestor/FullName+', Your request: ' + $Request/Title + 
+'has been rejected on ' + formatDateTime([%CurrentDateTime%],'MM/dd/yyyy')+
+'by'+$Approver/FullName + ', for the following reason: '`
+- AssociatedObject`$Request/RequestId`
+- Notifications.Notification_Account: `$Requestor`
 
 ### 3.3 승인 알림 마이크로플로우
 이제 마이크로플로우는 다음과 같은 모습일 것입니다:
 ![image](https://github.com/user-attachments/assets/395985f8-bcab-44ee-9f30-175f64443387)
+![image](https://github.com/user-attachments/assets/d67793c6-0bd9-4d4d-8fcf-d5e33218fe54)
+- 이때 주의해야 하는 것은 ObjectName을 잘 설정해서 써야 한다는 것이다. 안 그러면 변수로 인식이 안 된다. 
 
 ## 4. 거절 알림
 ### 4.1 알림이 거절될 때
@@ -117,7 +127,14 @@
    - 범위를 **First**로 설정합니다.
    - XPath를 다음과 같이 설정합니다: `[id = $currentUser]`.
    - 출력 객체 이름을 **Approver**로 설정합니다.
-4. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.
+4. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.![image](https://github.com/user-attachments/assets/c30b3da4-9d9b-4b2d-a563-a943d864999d)
+- Title: ''Your request has been rejected.''
+- Message: `'Dear '+ $Requestor/FullName + ', Your request: ' 
++ $Request/Title + ' has been rejected on ' 
++ formatDateTime([%CurrentDateTime%],'MM/dd/yyyy') 
++ 'by' + $Approver/FullName + ', for the following reason: '`
+- AssociatedObject: `$Request/RequestId`
+- Notifications.Notification_Account: `$Requestor`
 5. 마이크로플로우 끝에 **Show page** 활동을 추가합니다. 이 페이지에서 승인자는 알림에 사용자 정의 메시지를 추가할 수 있습니다.
 6. 새 페이지를 생성합니다: **Notification_CustomizeRejectionMessage**.
    - 템플릿: **Form Vertical**
@@ -126,6 +143,8 @@
 
 ### 4.3 거절 알림 마이크로 플로우
 이제 마이크로플로우는 다음과 같은 모습일 것입니다:
+
+
 **Notification_CustomizeRejectionMessage** 페이지를 엽니다. 페이지를 구성하는 방법은 다음 이미지처럼 합니다:
 
 # 알림 표시(Display Notifications)
