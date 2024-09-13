@@ -119,4 +119,89 @@
 ## 3.4 주의사항
 - 헤더 데이터에 있는 승인된 금액은 화면을 새로 고친 후에만 업데이트됩니다.
 
+# 퀴즈
+# 질문과 답변
+
+## Question 1:
+**How is the size of popup windows set to fixed?**
+
+- By manually setting the size of page columns.
+- By setting the resizable property of the page to No.
+- By selecting Atlas_Fixed layout.
+- Automatically.
+
+- **Answer**: **By setting the resizable property of the page to No.**
+- **Explanation**: To fix the size of the popup window, you need to set the **Resizable** property of the page to **No** and define a fixed width and height. The other options are unrelated to setting the popup size.
+
+- **한글 번역**:
+  - **답변**: **페이지의 resizable 속성을 No로 설정합니다.**
+  - **설명**: 팝업 창의 크기를 고정하려면 페이지의 **Resizable** 속성을 **No**로 설정하고 고정된 너비와 높이를 지정해야 합니다. 나머지 선택지는 팝업 크기 설정과 관련이 없습니다.
+![image](https://github.com/user-attachments/assets/c4fd1e29-85c6-42f0-a97e-8614c8cb0d61)
+
+---
+
+## Question 2:
+**How can you ensure that the buttons in the footer area of the relatively long and scrollable pop-up page are always visible?**
+
+- By setting the floating property of the footer to No.
+- By removing a scroll container.
+- By fixing the size of the scroll container.
+- By removing the outer layout grid.
+
+- **Answer**: **By removing the outer layout grid.**
+- **Explanation**: Removing the outer layout grid ensures that the footer buttons are "sticky" and remain visible even when scrolling. Other options do not relate to this feature in Mendix.
+
+- **한글 번역**:
+  - **답변**: **외부 레이아웃 그리드를 제거합니다.**
+  - **설명**: 외부 레이아웃 그리드를 제거하면 하단의 버튼이 "sticky" 상태가 되어 스크롤 시에도 항상 보입니다. 다른 선택지는 Mendix에서 팝업 하단을 고정하는 기능과 관련이 없습니다.
+
+---
+
+## Question 3:
+**What constraint can you use to show the most recently created items at the top of the page?**
+
+- createdDescend (date created)
+- dateCreated (descending)
+- createdDate (descending)
+- createdAscend (descending)
+
+- **Answer**: **createdDate (descending)**
+- **Explanation**: `createdDate (descending)` sorts requests by creation date, ensuring the most recent items appear at the top of the page. The other options are either incorrect or contain syntax errors.
+
+- **한글 번역**:
+  - **답변**: **createdDate (내림차순)**
+  - **설명**: `createdDate (내림차순)`은 요청이 생성된 날짜를 기준으로 정렬하여 가장 최근 항목이 페이지 상단에 나타나도록 합니다. 다른 선택지는 잘못되었거나 구문 오류가 있습니다.
+---
+
+## Question 4:
+**What are the default Mendix options for the popups?**
+
+- Resizable with size determined automatically, with layout grid as the most outer layer of the page.
+- Resizable with size determined automatically, with layout grid as the most inner layer of the page.
+- Fixed size determined automatically, with layout grid as the most inner layer of the page.
+- Fixed size determined automatically, with layout grid as the most outer layer of the page.
+
+- **Answer**: **Resizable with size determined automatically, with layout grid as the most outer layer of the page.**
+- **Explanation**: By default, Mendix popups are resizable, with their size determined automatically, and a layout grid is used as the outermost layer. Other answers either incorrectly describe the grid position or the size behavior.
+
+- **한글 번역**:
+  - **답변**: **크기 조정 가능하며 크기는 자동으로 결정되고, 레이아웃 그리드가 페이지의 가장 바깥 레이어로 설정됩니다.**
+  - **설명**: 기본적으로 Mendix 팝업 창은 크기 조정이 가능하며, 크기는 자동으로 결정됩니다. 레이아웃 그리드는 가장 바깥 레이어로 설정됩니다. 다른 답변은 그리드 위치 또는 크기 동작을 잘못 설명하고 있습니다.
+
+---
+
+## Question 5:
+**How to make the popup window always visible?**
+
+- Choose a different popup style.
+- Change the layer grid.
+- Remove the outer layer grid.
+- Add a button to “glue” them.
+
+- **Answer**: **Remove the outer layer grid.**
+- **Explanation**: By removing the outer layout grid, the footer becomes sticky, ensuring that the popup's important buttons are always visible. The other answers either don't apply to this situation or involve incorrect steps.
+
+- **한글 번역**:
+  - **답변**: **외부 레이아웃 그리드를 제거합니다.**
+  - **설명**: 외부 레이아웃 그리드를 제거하면 팝업 창의 하단 버튼이 "sticky" 상태가 되어 항상 보입니다. 다른 답변은 이 상황에 맞지 않거나 잘못된 절차를 포함하고 있습니다.
 
