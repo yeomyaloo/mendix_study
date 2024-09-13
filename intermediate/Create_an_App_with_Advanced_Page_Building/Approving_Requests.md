@@ -71,6 +71,7 @@
 
 ### 2.4 팝업 페이지 빌드
 - **데이터 그리드 추가**: Location 위젯 아래에 **Data grid**를 배치하고, 데이터 소스를 **RequestLine_Request** > **RequestLine** 엔터티로 연결
+   - ![image](https://github.com/user-attachments/assets/dc13ecf1-4f19-45c1-b9a3-0995488cab7d)
 - **구조 모드 사용**: Cancel 버튼을 Approve 및 Reject 버튼과 같은 줄에 배치
 
 ### 2.5 승인/거부 버튼의 동작 설정
@@ -80,15 +81,22 @@
     - 요청 상태를 Approved로 설정
     - 요청을 커밋하고 클라이언트 새로고침
     - 페이지 닫기
+    - ![image](https://github.com/user-attachments/assets/f2289f29-8d16-4ea5-a913-e13e8bae3d71)
+    - ![image](https://github.com/user-attachments/assets/d62e0ee8-3e90-4b86-8828-27aff0695cb1)
+
 - **Reject 버튼**:
   - **Microflow**: ACT_Request_StatusRejected
+  - ![image](https://github.com/user-attachments/assets/80cc57c4-4074-4356-a6df-f6db6efe7dc4)
   - **동작**:
     - 요청 상태를 Rejected로 설정
     - 요청을 커밋하고 클라이언트 새로고침
     - 페이지 닫기
+      ![image](https://github.com/user-attachments/assets/35f174fb-f014-4beb-aacc-328d9d0712ce)
+      ![image](https://github.com/user-attachments/assets/726d0e14-ff1b-4276-adfe-9d4fe9e85ed7)
 
 ### 2.6 권한 설정
 - Approver에게 팝업 페이지와 두 Microflow에 대한 접근 권한을 부여합니다.
+![image](https://github.com/user-attachments/assets/d0df86b3-b463-499d-8c4b-e739d0f0a803)
 
 ### 2.7 홈 페이지에 버튼 추가
 - **버튼 추가 위치**: List view
@@ -96,6 +104,7 @@
   - **Caption**: Approve/Reject
   - **Render mode**: Link
   - **권한**: Approver 모듈 역할만 버튼을 볼 수 있도록 설정
+   ![image](https://github.com/user-attachments/assets/706feaf8-4af3-4cd7-a211-2895be5d0e22)
 
 ## 3. 기능 테스트
 ### 3.1 애플리케이션 배포
