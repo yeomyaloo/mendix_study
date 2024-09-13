@@ -89,15 +89,18 @@
    - 범위를 **First**로 설정합니다.
    - 다음 XPath를 사용합니다: `[id = $Request/System.owner]`.
    - 출력 객체 이름을 **Requestor**로 설정합니다.
+   - ![image](https://github.com/user-attachments/assets/217e92db-615d-424f-90c1-f80c77bdbb95)
 3. 승인자를 검색합니다.
    - **TeamMember** 엔터티에 대한 **Retrieve** 활동을 추가합니다.
    - 범위를 **First**로 설정합니다.
    - 다음 XPath를 사용합니다: `[id = $currentUser]`.
    - 출력 객체 이름을 **Approver**로 설정합니다.
 4. 새 **Notification** 객체를 생성합니다. 객체는 다음 이미지처럼 구성합니다.
+![image](https://github.com/user-attachments/assets/ead3a24e-96f6-4a3a-9728-539a0bf73418)
 
 ### 3.3 승인 알림 마이크로플로우
 이제 마이크로플로우는 다음과 같은 모습일 것입니다:
+![image](https://github.com/user-attachments/assets/395985f8-bcab-44ee-9f30-175f64443387)
 
 ## 4. 거절 알림
 ### 4.1 알림이 거절될 때
