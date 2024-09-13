@@ -9,35 +9,35 @@
 - 이전에 했던 것처럼, 먼저 이 새로운 기능의 기본 사항인 도메인 모델과 기본 접근 권한을 구축하는 것에 집중하겠습니다.
 
 ### 1.1 알림 기능
-
 알림은 일반 직원과 재무 직원에게만 필요하며, 관리자는 필요하지 않습니다. 관리자가 알림 기능을 사용할 수 없도록 쉽게 만들기 위해, 별도의 모듈로 추가할 것입니다.
 
 ### 1.2 도메인 모델
-1. App Explorer에서 앱 이름을 마우스 오른쪽 버튼으로 클릭하고 **Add module…**을 선택하세요.
+1. App Explorer에서 앱 이름을 마우스 오른쪽 버튼으로 클릭하고 **Add module…**을 선택하세요.![image](https://github.com/user-attachments/assets/4f408448-4a7a-4241-8cd4-ea0937caa221)
 2. 모듈 이름을 **Notifications**로 설정합니다.
 3. 도메인 모델이 자동으로 열립니다. **Notification** 엔터티를 추가하고 다음 속성을 추가하세요:
    - **Title** (String)
    - **Message** (String, 최대 길이 1000)
    - **Read** (Boolean)
    - **AssociatedObject** (Long)
-4. **Store 'owner'** 체크박스를 선택합니다.
+4. **Store 'owner'** 체크박스를 선택합니다.![image](https://github.com/user-attachments/assets/c743ad4e-3a82-4d0a-bd59-ebebdc3ec8f9)
 5. **Notification** 엔터티를 마우스 오른쪽 버튼으로 클릭하고, **Add > Association**을 선택하여 **Administration.Account** 엔터티와 * - * 연관 관계를 추가합니다.
 6. **Expenses** 모듈의 도메인 모델을 엽니다.
 7. **Request** 엔터티에 **RequestID**라는 새 속성을 추가합니다. 유형은 **AutoNumber**입니다.
    - **AssociatedObject** 속성은 **Request**와의 연결을 담당하며, 연관 관계를 생성하지 않고도 연결을 할 수 있게 해줍니다. 이를 통해 모듈을 독립적인 기능으로 다른 앱으로 내보내기 쉽게 만듭니다. 이 속성은 **RequestID**를 저장하고 연결을 조회하는 데 사용됩니다.
 
 ### 1.3 보안 및 접근 권한
-
 1. **Notifications** 모듈의 보안 설정 창을 엽니다.
 2. **User**와 **Approver**라는 두 개의 새 모듈 역할을 추가합니다.
 3. **Notification** 엔터티와 **User** 모듈 역할에 대한 엔터티 접근 규칙을 추가합니다. 접근 규칙을 다음 이미지와 같이 구성하세요:
-   - XPath 제약 조건 탭에서 **Path to user…** 버튼을 사용하여 사용자가 자신의 알림만 볼 수 있도록 XPath 제약 조건을 생성합니다. 버튼은 다음과 같은 XPath를 생성해야 합니다: `[Notifications.Notification_Account='[%CurrentUser%]']`
-4. **Notification** 엔터티와 **Approver** 모듈 역할에 대한 엔터티 접근 규칙을 추가합니다. 접근 규칙을 다음 이미지와 같이 구성하세요:
+   - XPath 제약 조건 탭에서 **Path to user…** 버튼을 사용하여 사용자가 자신의 알림만 볼 수 있도록 XPath 제약 조건을 생성합니다. 버튼은 다음과 같은 XPath를 생성해야 합니다: `[Notifications.Notification_Account='[%CurrentUser%]']`![image](https://github.com/user-attachments/assets/dd6a17a3-a7dd-443c-9746-e1b738e2f850)
+4. **Notification** 엔터티와 **Approver** 모듈 역할에 대한 엔터티 접근 규칙을 추가합니다. 접근 규칙을 다음 이미지와 같이 구성하세요:![image](https://github.com/user-attachments/assets/0be55407-f2e8-4377-bad8-850063fcb9bf)
 5. **Expenses** 모듈의 보안 설정 창을 엽니다.
-   - **Requestor**에게 **Request** 엔터티의 **RequestID** 속성에 대한 읽기 권한을 부여하세요.
+   - **Requestor**에게 **Request** 엔터티의 **RequestID** 속성에 대한 읽기 권한을 부여하세요.![image](https://github.com/user-attachments/assets/cca06672-cfe1-47a6-a5ee-43a1cfa2f359)
 6. 앱 보안 설정 창을 엽니다.
    - **Requestor** 사용자 역할을 **Notifications** 모듈의 새로 생성된 **User** 모듈 역할에 연결합니다.
+      - ![image](https://github.com/user-attachments/assets/ef9d5d52-b16b-41e0-8880-b63d148b9c96)
    - **Approver** 사용자 역할을 **Notifications** 모듈의 **Approver** 모듈 역할에 연결합니다.
+      - 
 
 # 사용자 정의 네비게이션 메뉴
 - 주 네비게이션 트리가 아닌 네비게이션 메뉴를 표시하고 싶을 때는 **Menu document**를 사용하여 사용자 정의 네비게이션 메뉴를 만들 수 있습니다.
@@ -55,7 +55,7 @@
 2. 요청이 승인자에 의해 승인될 때, 요청을 생성한 요청자가 알림을 받아야 합니다.
 3. 요청이 승인자에 의해 거절될 때, 요청을 생성한 요청자가 알림을 받아야 합니다. 이 경우, 승인자는 요청이 거절된 이유에 대한 메시지를 추가할 수 있어야 합니다.
 
-## 2. 생성 알
+## 2. 생성 알림
 ### 2.1 알림이 생성될 때(Creation Notification)
 요청자가 요청을 완료하면 모든 승인자에게 알림이 발송되어야 합니다. 이를 통해 승인자들은 승인해야 할 새 요청이 있다는 사실을 알게 됩니다.
 한 명의 승인자가 알림을 확인하면 다른 승인자들의 알림은 제거되어야 합니다.
