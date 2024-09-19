@@ -1,4 +1,4 @@
-# Learning Objectives - 학습 목표
+![image](https://github.com/user-attachments/assets/5db0cf55-5c6f-41ff-9981-2ece5fb63a16)# Learning Objectives - 학습 목표
 1. 앱 생성
    - 새로운 앱을 생성할 수 있습니다.
 2. 앱에 피드백 위젯 추가 
@@ -45,7 +45,8 @@
 - 스니펫의 사용은 "Don't Repeat Yourself (DRY)" 원칙을 기반으로 하며, 이는 인터페이스의 수정할 장소를 줄이고 매끄러운 전환과 사용자 친화적인 경험을 제공합니다.
 
 ### 3.2 피드백 위젯 추가하는 방법
-1. App Explorer에서 FeedbackWidget 스니펫을 찾을 수 있습니다. 이 스니펫은 자동으로 프로젝트에 추가되었습니다. 도구 상자에서 데이터 뷰, 데이터 그리드 등과 같은 위젯처럼 이 스니펫을 페이지에 추가할 수 있습니다. 이 스니펫은 이미 Atlas_Default 및 Atlas_TopBar 레이아웃의 일부이며, 앱에서는 Atlas_Default 레이아웃을 사용할 것입니다.
+1. App Explorer에서 FeedbackWidget 스니펫을 찾을 수 있습니다. 이 스니펫은 자동으로 프로젝트에 추가되었습니다. 도구 상자에서 데이터 뷰, 데이터 그리드 등과 같은 위젯처럼 이 스니펫을 페이지에 추가할 수 있습니다. 이 스니펫은 이미 Atlas_Default 및 Atlas_TopBar 레이아웃의 일부이며, 앱에서는 Atlas_Default 레이아웃을 사용할 것입니다.</br>
+![image](https://github.com/user-attachments/assets/35b0978b-e3b1-4a14-ac29-cacfb3f824dd)
 2. Feedback Widget의 Advanced 탭으로 가면 App ID가 이미 설정되어 있어야 합니다. 설정되어 있지 않다면, Mendix Portal로 가서 프로젝트의 General Settings를 열어 이 ID를 쉽게 찾을 수 있습니다.
 3. Feedback 위젯 속성 창의 Project 탭에서 Allow screenshots 속성이 Yes로 설정되어 있는지 확인합니다. 이 설정을 통해 피드백 항목에 대한 모든 가능한 정보를 얻을 수 있습니다.
 4. Authentication 탭에서 Authentication method로 Custom authentication을 선택합니다. 그런 다음 아래 스크린샷에 표시된 대로 User Object (1), User name attribute (2), Email attribute (3)를 입력합니다. 이 속성을 구성하면 피드백을 추가하는 로그인된 사용자에게 자동으로 이 정보가 채워집니다.
@@ -63,6 +64,7 @@
 1. App Security로 이동하여 보안 수준을 ‘Off’에서 ‘Production’으로 변경합니다.
 2. User roles 탭으로 이동하여 ‘EventManager’라는 새로운 사용자 역할을 생성하고 MyFirstModule 모듈에 해당하는 모듈 역할을 생성합니다.
 3. OK를 클릭하여 앱 보안을 닫습니다.
+![image](https://github.com/user-attachments/assets/64dfefb3-d8a0-48ae-b3c9-848af6370b59)
 
 ### 4.3 보안 설정하기
 #### 4.3.1 1단계
@@ -73,19 +75,22 @@
 - OK를 클릭하여 App Security를 닫고 MyFirstModule 모듈의 Module Security를 엽니다. 여기에서 방금 생성한 모듈 역할 (EventManager)과 User를 볼 수 있어야 합니다. User 모듈 역할을 제거합니다. 사용 중이라는 경고가 표시되지만 문제는 없습니다. 팝업에서 Delete를 클릭합니다.
 - 이제 이 모듈에 새로운 모듈 역할을 추가하고 이를 Visitor라고 명명한 후, OK를 클릭하여 모듈 보안을 닫습니다.
 - 다시 App Security로 돌아가서 새로운 모듈 역할 Visitor를 사용자 역할 Visitor와 연결한 후, OK를 클릭하여 App Security를 닫습니다.
+![image](https://github.com/user-attachments/assets/f2119cf9-3a2c-4cb3-8dd4-2a0864f68577)
 - 이제 오류 도크에서 하나의 오류가 나타납니다: 선택된 모듈 역할 ‘MyFirstModule.User’가 더 이상 존재하지 않습니다. 이를 해결하려면 ‘Home_Web’ 페이지를 열고 속성에서 ‘Visible for’ 모듈 역할을 변경해야 합니다.
+![image](https://github.com/user-attachments/assets/74e8434b-38c1-417e-a6cb-06b836dbdaa2)
 - 먼저 기존 모듈 역할 중 아무것도 선택하지 않고 어떤 일이 발생하는지 봅시다. 결국 홈페이지는 기본 홈페이지로 호출되므로 모듈 역할을 설정할 필요가 없습니다.
 - 이제 다른 오류가 나타납니다: 페이지가 탐색 또는 버튼에서 사용되는 경우 허용된 역할 중 하나는 선택해야 한다는 오류입니다. 이는 앱 탐색에 ‘Home_Web’ 페이지를 참조하는 탐색 항목이 있기 때문입니다. 모듈 역할이 연결되어 있지 않으면 아무도 페이지에 접근할 수 없으므로 이 오류는 이해할 수 있습니다.
 
 #### 4.3.3 3단계
 - MyFirstModule 모듈의 Module Security를 열어 Page access 탭을 선택하고 두 모듈 역할을 선택합니다. OK를 클릭하여 저장합니다.
 - 이제 앱 탐색을 확인하여 EventManager와 Visitor가 ‘Home_Web’ 페이지를 볼 수 있는지 확인합니다.
-
+![image](https://github.com/user-attachments/assets/fff5e449-0236-4705-a030-8b916fc45dad)
 
 ## 5. 엔티티와 속성 만들기
 - 먼저 MyFirstModule 모듈의 이름을 EventManagement로 변경합니다.
 - MyFirstModule이라는 이름은 모듈에서 어떤 기능이 관리되는지에 대해 아무런 정보를 주지 않기 때문에, 모듈의 이름은 해당 기능에 대해 설명할 수 있어야 합니다.
-- 이름을 선택한 후 F2를 눌러 쉽게 변경할 수 있습니다.
+- 이름을 선택한 후 `F2`를 눌러 쉽게 변경할 수 있습니다.
+   - 변경할 모듈을 클릭 후 F2키를 누르면 이름 변경이 쉽게 됩니다. 
 
 ### 5.1 엔티티와 속성 추가하기
 - **EventInformation**  
@@ -94,15 +99,12 @@
   - 종료 날짜 (날짜 및 시간)  
   - 위치 (문자열)  
   - 하루 허용 방문자 수 (정수)  
-
 - **Artist**  
   - 이름 (문자열)  
   - 전기 (문자열)  
-
 - **Stage**  
   - 이름 (문자열)  
   - 수용 인원 (문자열)  
-
 - **Day**  
   - 시작 날짜 (날짜 및 시간)  
   - 종료 날짜 (날짜 및 시간)  
@@ -111,14 +113,19 @@
 ![image](https://github.com/user-attachments/assets/c882955a-a8d1-4c15-9a48-90690d9e93e5)
 
 ## 6. 페이지 생성 및 프로젝트에 추가하기
-이제 도메인 모델에 엔티티를 설정했으니, 이 엔티티의 인스턴스를 유지 관리할 수 있는 프론트 엔드를 만들어야 합니다. 따라서 다음 엔티티에 대한 페이지를 생성하겠습니다:
+이제 도메인 모델에 엔티티를 설정했으니, 이 엔티티의 인스턴스를 유지 관리할 수 있는 `프론트 엔드`를 만들어야 합니다. 따라서 다음 엔티티에 대한 페이지를 생성하겠습니다:
 - Artist
 - Day
 - Stage
-### 6.1 페이지 자동 생성 방법
-1. 엔티티를 우클릭하고 `Generate Overview Pages…` 옵션을 선택합니다. 이 기능은 선택한 엔티티에 대한 Overview 페이지와 NewEdit 페이지를 생성합니다. 한 번에 하나의 엔티티만 처리해야 합니다. 그렇지 않으면 Mendix가 모든 페이지에 대한 메뉴 스니펫을 생성하여 특정 페이지에 추가하게 됩니다. 현재 우리는 레이아웃의 일부로 사용하는 앱 네비게이션을 사용하려고 하므로 필요하지 않습니다.
 
+### 6.1 페이지 자동 생성 방법
+1. 엔티티를 우클릭하고 `Generate Overview Pages…` 옵션을 선택합니다. 이 기능은 선택한 엔티티에 대한 Overview 페이지와 NewEdit 페이지를 생성합니다. **한 번에 하나의 엔티티만 처리**해야 합니다. 그렇지 않으면 Mendix가 모든 페이지에 대한 메뉴 스니펫을 생성하여 특정 페이지에 추가하게 됩니다. 현재 우리는 레이아웃의 일부로 사용하는 앱 네비게이션을 사용하려고 하므로 필요하지 않습니다.
+![image](https://github.com/user-attachments/assets/0a5aae09-472e-4523-82e1-56c579420148)
+![image](https://github.com/user-attachments/assets/8da558a3-725a-485a-b02a-6c3feb3655df)</br>
+개요 페이지가 'OverviewPages' 폴더에 생성되었습니다. 이 개요 페이지 중 하나를 내비게이션 메뉴에 연결하여 선택한 모든 엔티티에 대해 객체를 생성하거나 편집할 수 있습니다.
 2. Overview 페이지에는 `Atlas_Default`를 선택하고, NewEdit 페이지에는 `PopupLayout`을 선택합니다. Overview 페이지와 NewEdit 페이지는 동일한 레이아웃을 사용하여 일관된 모양과 느낌을 제공합니다.
+![image](https://github.com/user-attachments/assets/ce5b44c9-d831-4b31-a949-8d9f7fcd94eb)
+![image](https://github.com/user-attachments/assets/cac2bce7-b3d5-417c-b6bd-48bfd5330539)
 
 3. 1단계와 2단계를 따라 나머지 두 엔티티에 대한 페이지를 생성합니다.
 
@@ -131,7 +138,8 @@
 7. EventManager가 이러한 페이지에 접근할 수 있도록 하려면 올바른 모듈 역할을 Overview 페이지에 대한 접근 권한을 부여합니다.
 
 결과는 다음과 같아야 합니다:
-결과 사진 
+![image](https://github.com/user-attachments/assets/2b087c9c-72b8-4355-abc5-67553aa22460)
+![image](https://github.com/user-attachments/assets/991c571e-fa93-482b-b955-b087be6bad29)
 
 8. 작업이 완료되면 프로젝트에서 “No read access to attribute ‘Name’ in entity ‘EventManagement.Artist’ for user role ‘EventManager’ (with role ‘EventManager’ in module ‘EventManagement’)”와 같은 오류가 여러 개 발생합니다. 이는 보안 오류로, 사용자가 정보를 볼 수 있는 페이지를 허용했지만 엔티티 보안이 아직 구성되지 않았기 때문입니다.
 
@@ -183,5 +191,24 @@
 3. Administration 모듈 내에서 `Account_Overview` 페이지를 찾습니다.
 
 
+--- 
+# troubleshooting
+## 1. JDK 버전 문제 해결 방법(멘딕스 안에서..) 
+### 1.1 문제상황
+![image](https://github.com/user-attachments/assets/ce0bbf35-73fe-4a50-9159-78cc4247c267)
+- JDK 21 버전이 필요한 상황이기 때문에 이를 받아서 넣어주기만 하면 된다
+
+### 1.2 해결 방법
+![image](https://github.com/user-attachments/assets/cdd7f17f-aa57-4d53-a1ad-0fb6692cebd3)
+- [JDK 21버전 다운 받는 곳](https://adoptium.net/temurin/releases/?version=21)
+
+## 2. Gradle 버전 문제 해결 방법(JDK 21버전 이상 사용시에 해결방법..) 
+### 2.1 문제상황
+![image](https://github.com/user-attachments/assets/318c8432-bb0d-4ae8-aa1b-91c2cbf9cfb7)
+
+### 2.2 해결 방법
+- [Gradle 릴리즈된 버전 별 다운 받는 곳](https://gradle.org/releases/)
+- JDK 21의 경우라면 gradle 7.6 이상 버전을 사용해야 하기 때문에 해당 페이지에서 원하는 버전을 받아서 원하는 위치에 해당 zip 파일을 두고 이를 gradle 위치로 잡아주면 됩니다.
+  
 
 
