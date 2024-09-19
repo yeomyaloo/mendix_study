@@ -90,17 +90,12 @@ How many source and destination languages can you specify?
 ### 번역:
 **몇 개의 소스 및 목적지 언어를 지정할 수 있습니까?**
 - 하나의 소스, 여러 목적지
-- 하나의 소스, 하나의 목적지
+- **하나의 소스, 하나의 목적지**
 - 여러 소스, 하나의 목적지
 - 여러 소스, 여러 목적지
 
-### Explanation:
-You can specify one source language and multiple destination languages for translations in Mendix. This allows you to translate your app from one language to several other languages efficiently.
-
 **해설:**
-Mendix에서는 하나의 소스 언어에서 여러 목적지 언어로 번역할 수 있습니다. 이를 통해 한 언어에서 다른 여러 언어로 앱을 효율적으로 번역할 수 있습니다.
-
-정답: **하나의 소스, 여러 목적지**
+- 번역 작업에서 소스 언어와 대상 언어를 각각 하나씩 지정하는 것이 일반적입니다. 따라서 동시에 여러 소스 언어 또는 대상 언어를 설정할 수 없습니다.
 
 ---
 
@@ -125,8 +120,6 @@ The default project language defines the language that users will see when using
 기본 프로젝트 언어는 사용자가 앱을 사용할 때 기본적으로 표시되는 언어를 정의합니다. 다른 언어 설정이 적용되지 않으면 이 언어가 사용자에게 표시됩니다.
 
 정답: **사용자가 앱을 사용할 때 볼 언어**
-
----
 
 ## Question 3:
 When and how a default language of an app needs to be selected?
@@ -161,7 +154,6 @@ Where can you choose the development language?
 
 ### 번역:
 **개발 언어는 어디에서 선택할 수 있습니까?**
-
 - 언어 라이브러리
 - 시스템 텍스트
 - 프로젝트 폴더
@@ -180,7 +172,7 @@ The development language can be chosen in the toolbar of Studio Pro. This langua
 ## Question 5:
 Which of the following functionalities do you need to use to show a complete list of all translatable texts of a source and destination language?
 - Import translation
-- Batch translation
+- **Batch translation**
 - Occurrence window
 - Export translation
 
