@@ -113,4 +113,110 @@
 23. **When working in an app with version control, which concept would you use to share your database with your team?**  
     **답변:** By creating a data snapshot and adding it to the deployment directory of your app.  
     **번역:** 버전 관리가 있는 앱에서 팀과 데이터베이스를 공유하기 위해 어떤 개념을 사용하나요?  
-   
+
+# Mendix Intermediate Developer Exam Questions - 번역 및 해석
+
+24. **What type of conflict occurs when you and your colleague both modified the microflow implementing the delete behavior?**  
+    **답변:** Modify-Modify  
+    **번역:** 삭제 동작을 구현하는 마이크로플로우를 여러분과 동료가 동시에 수정했을 때 어떤 종류의 충돌이 발생하나요?  
+    **해석:** 두 사람이 같은 마이크로플로우를 동시에 수정하면 Modify-Modify 충돌이 발생합니다.
+
+25. **Which of the below listed definitions can be applied to explain what does a tagged version mean?**  
+    **답변:** A revision that has been used to build a Mx deployment package.  
+    **번역:** 아래 나열된 정의 중 태그 버전이 무엇인지 설명하는 데 적용될 수 있는 정의는 무엇인가요?  
+    **해석:** 태그 버전은 Mx 배포 패키지를 구축하는 데 사용된 수정 사항을 의미합니다.
+
+26. **Which function is used to merge a complete branch into the mainline and is only available on the main line?**  
+    **답변:** Merge feature branch  
+    **번역:** 전체 브랜치를 메인 라인에 병합하는 데 사용되는 기능은 무엇이며, 이는 메인 라인에서만 사용할 수 있나요?  
+    **해석:** 전체 브랜치를 메인 라인에 병합하는 기능은 "Merge feature branch"이며, 메인 라인에서만 사용 가능합니다.
+
+27. **Which of the below mentioned options can be used to merge revisions into and from all lines, main line or branch line?**  
+    **답변:** Advanced merge  
+    **번역:** 모든 라인(메인 라인 또는 브랜치 라인)으로 수정을 병합할 때 사용할 수 있는 옵션은 무엇인가요?  
+    **해석:** 모든 라인으로 수정을 병합할 때는 "Advanced merge"를 사용합니다.
+
+28. **Where in Mendix Studio Pro can you configure XPaths?**  
+    **답변:** Microflow Retrieve actions  
+    **번역:** Mendix Studio Pro에서 XPaths를 어디에서 설정할 수 있나요?  
+    **해석:** XPaths는 Microflow의 Retrieve 액션에서 설정할 수 있습니다.
+
+29. **Which Widget feature utilizes XPaths?**  
+    **답변:** Selectable data constraints on Reference Selectors  
+    **번역:** XPaths를 활용하는 위젯 기능은 무엇인가요?  
+    **해석:** Reference Selectors에서 선택 가능한 데이터 제약 조건이 XPaths를 활용합니다.
+
+30. **Where can you utilize XPaths in microflows?**  
+    **답변:** In the 'Retrieve' action  
+    **번역:** 마이크로플로우에서 XPaths를 어디에 활용할 수 있나요?  
+    **해석:** XPaths는 마이크로플로우의 'Retrieve' 액션에서 활용할 수 있습니다.
+
+31. **How do you begin typing an XPath?**  
+    **답변:** If you want to open the XPath auto-complete menu, you need to press: Ctrl + Space  
+    **번역:** XPath 입력을 시작하려면 어떻게 해야 하나요?  
+    **해석:** XPath 입력을 시작하려면 XPath 자동 완성 메뉴를 열기 위해 Ctrl + Space를 눌러야 합니다.
+
+32. **Say you are writing an XPath in a Retrieve action for the VacationRequest entity in a Microflow. If you write in the XPath window [Status = 'Cancelled'], what will be returned?**  
+    **답변:** A list of all the cancelled requests  
+    **번역:** 마이크로플로우의 VacationRequest 엔터티에 대한 Retrieve 액션에서 XPath에 [Status = 'Cancelled']를 작성하면 무엇이 반환되나요?  
+    **해석:** XPath가 [Status = 'Cancelled']로 설정되면 취소된 모든 요청 목록이 반환됩니다.
+
+33. **If you write in the XPath window [VacationRequest.VacationRequest_Submitter='[%CurrentUser%]'], what will be returned?**  
+    **답변:** A list of all vacation requests submitted by the current user  
+    **번역:** XPath에 [VacationRequest.VacationRequest_Submitter='[%CurrentUser%]']를 작성하면 무엇이 반환되나요?  
+    **해석:** 현재 사용자에 의해 제출된 모든 휴가 요청 목록이 반환됩니다.
+
+34. **Which of the following options indicates a correct way of structuring resources within App Explorer?**  
+    **답변:** Manually  
+    **번역:** App Explorer 내에서 리소스를 구조화하는 올바른 방법을 나타내는 옵션은 무엇인가요?  
+    **해석:** 리소스를 구조화하는 방법으로 수동으로 구조화하는 것이 올바릅니다.
+
+35. **When structuring the App Explorer, which of the following subfolders would be the best choice to store things like Enumerations and Regular Expressions?**  
+    **답변:** Resources  
+    **번역:** App Explorer를 구조화할 때, Enumerations와 Regular Expressions와 같은 항목을 저장하기 위한 최상의 하위 폴더는 무엇인가요?  
+    **해석:** Enumerations와 Regular Expressions을 저장하기 위해 "Resources" 하위 폴더가 적합합니다.
+
+36. **When connecting a profile picture to an account of a team member, providing that it should be possible to alter the picture, which of the following options would you choose?**  
+    **답변:** Create a ProfilePicture entity and configure Image entity in the System module as its generalization.  
+    **번역:** 팀원의 계정에 프로필 사진을 연결하면서 사진을 변경할 수 있어야 하는 경우, 어떤 옵션을 선택하나요?  
+    **해석:** ProfilePicture 엔터티를 생성하고 System 모듈의 Image 엔터티를 일반화로 설정하는 방법이 적합합니다.
+
+37. **As Users by default always have multiple UserRoles, which of the following options can you put in place to ensure a user gets restricted to only one user role?**  
+    **답변:** Adding the microflow logic.  
+    **번역:** 사용자에게 기본적으로 여러 사용자 역할이 있는 경우, 사용자가 하나의 사용자 역할로 제한되도록 하기 위해 어떤 옵션을 사용할 수 있나요?  
+    **해석:** 사용자가 하나의 사용자 역할로 제한되도록 하려면 마이크로플로우 로직을 추가해야 합니다.
+
+38. **Which widget from the listed below needs to be used inside of a List View for visualizing a dynamic image?**  
+    **답변:** Image Viewer  
+    **번역:** 동적 이미지를 시각화하기 위해 List View 내부에서 사용해야 하는 위젯은 무엇인가요?  
+    **해석:** List View에서 동적 이미지를 시각화하기 위해 "Image Viewer" 위젯을 사용합니다.
+
+39. **Which of the following options can be used in Mendix Studio for customizing styling of an app?**  
+    **답변:** By adjusting theme setting in the Theme Editor.  
+    **번역:** Mendix Studio에서 앱의 스타일을 사용자 정의하기 위해 어떤 옵션을 사용할 수 있나요?  
+    **해석:** 앱의 스타일을 사용자 정의하려면 Theme Editor에서 테마 설정을 조정할 수 있습니다.
+
+40. **Which of the following options is used for featuring the navigation menu in a sidebar?**  
+    **답변:** Atlas Default  
+    **번역:** 사이드바에서 내비게이션 메뉴를 특징으로 하기 위해 사용되는 옵션은 무엇인가요?  
+    **해석:** 사이드바에서 내비게이션 메뉴를 표시하기 위해 "Atlas Default"를 사용합니다.
+
+41. **Which of the following terms refers to the empty areas that form the canvas for any pages that make use of the layout?**  
+    **답변:** Placeholders  
+    **번역:** 레이아웃을 사용하는 페이지의 캔버스를 형성하는 빈 영역을 지칭하는 용어는 무엇인가요?  
+    **해석:** 레이아웃을 사용하는 페이지에서 빈 영역은 "Placeholders"라고 합니다.
+
+42. **When a layout is based on another layout, which of the mentioned option refers to the parent layout?**  
+    **답변:** Master layout  
+    **번역:** 레이아웃이 다른 레이아웃을 기반으로 할 때, 부모 레이아웃을 지칭하는 옵션은 무엇인가요?  
+    **해석:** 레이아웃이 다른 레이아웃을 기반으로 할 때 부모 레이아웃은 "Master layout"입니다.
+
+43. **Which of the principles needs to be utilized to reduce duplication of already created elements?**  
+    **답변:** DRY  
+    **번역:** 이미 생성된 요소의 중복을 줄이기 위해 어떤 원칙을 사용해야 하나요?  
+    **해석:** 중복을 줄이기 위해 "DRY" (Don't Repeat Yourself) 원칙을 사용합니다.
+
+44. **Which of the following options indicates a default configuration of a page created using the Wizard Progress page template, consisting of 4 page template steps?**  
+    **답변:** Step 2 is active, Step 1 is visited  
+    **번역:** 4단계 페이지 템플릿을 사용하여 생성된
+
