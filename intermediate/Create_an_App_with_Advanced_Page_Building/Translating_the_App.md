@@ -50,10 +50,36 @@ Mendix Studio Pro 외부에서 언어를 번역하고 싶다면, 번역 가능�
 ## 1. 언어 추가 방법
 1. **App Explorer**에서 `Settings`를 더블 클릭하세요. 그러면 `App Settings` 창이 열립니다.
 2. **Languages** 탭으로 이동합니다.
-![image](https://github.com/user-attachments/assets/272b1cfe-564d-4e24-b854-d45240daf144)
 3. `Add` 버튼을 클릭하여 새로운 언어를 추가합니다.
 4. `Dutch, Netherlands` 언어를 검색한 후 `OK`를 클릭하세요.
 5. 다시 `OK`를 클릭하여 `Settings` 창을 닫습니다.
+
+## 2. 앱 번역
+### 2.1 방법
+1. **현재 언어**를 네덜란드어로 설정하세요. (해당 7.1 Introduction 파트에서 제공하는 모듈을 다운 받았다면 네덜란드어가 이미 포함되어 있을 것이다.)
+![image](https://github.com/user-attachments/assets/d3e2c52f-e13b-4fe3-9107-7752bd2814d0)
+
+2. `Request_Wizard_Step1` 페이지를 열어보면, 다른 단어들에 각괄호 (<>)가 있는 것을 볼 수 있습니다. 이는 일부 단어가 자동으로 네덜란드어 시스템 값으로 설정되기 때문입니다(예: ‘Knop’, 네덜란드어로 버튼을 의미). 다른 단어들은 자동으로 번역되지 않아 각괄호가 표시됩니다.
+
+3. **영어**로 다시 전환하여 번역할 텍스트 발생 위치를 파악하세요.
+
+4. 툴바의 **Language** 메뉴에서 `Batch Translate...`를 클릭하세요.
+   - **Source language**: English, United States (기본값).
+   - **Destination language**: Dutch, Netherlands.
+   - `OK`를 클릭하세요.
+
+5. **Batch translate** 창에서 `Cancel`을 검색하세요. 여러 번 발생한 이 라인을 한 번에 번역할 수 있습니다!
+
+6. 이를 `Annuleren`으로 번역하고 `Translate` 버튼을 클릭하세요.
+![image](https://github.com/user-attachments/assets/0da9f85a-cf16-4d01-a553-1e86c5f413cc)
+
+7. 창을 닫고 다시 언어를 네덜란드어로 설정하세요. 버튼이 번역된 것을 보셨나요?
+
+8. 이제 `HeaderExpenses` 스니펫을 열고 `<Submitted>`를 `<Aangevraagd>`로, `<Approved>`를 `<Goedgekeurd>`로 번역하세요.
+
+9. 언어를 다시 영어로 변경해보세요. 여전히 `Submitted`와 `Approved`로 표시되어 있나요?
+
+축하합니다! 이제 한 번에 하나의 텍스트 발생(페이지 수준)과 배치 번역(앱 전체)을 수행하는 방법을 알게 되었습니다.
 
 
 
