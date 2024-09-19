@@ -79,7 +79,125 @@ Mendix Studio Pro 외부에서 언어를 번역하고 싶다면, 번역 가능�
 
 9. 언어를 다시 영어로 변경해보세요. 여전히 `Submitted`와 `Approved`로 표시되어 있나요?
 
-축하합니다! 이제 한 번에 하나의 텍스트 발생(페이지 수준)과 배치 번역(앱 전체)을 수행하는 방법을 알게 되었습니다.
+# 퀴즈
+## Question 1:
+How many source and destination languages can you specify?
+- One source, many destinations
+- One source, one destination
+- Many sources, one destination
+- Many sources, many destinations
+
+### 번역:
+**몇 개의 소스 및 목적지 언어를 지정할 수 있습니까?**
+- 하나의 소스, 여러 목적지
+- 하나의 소스, 하나의 목적지
+- 여러 소스, 하나의 목적지
+- 여러 소스, 여러 목적지
+
+### Explanation:
+You can specify one source language and multiple destination languages for translations in Mendix. This allows you to translate your app from one language to several other languages efficiently.
+
+**해설:**
+Mendix에서는 하나의 소스 언어에서 여러 목적지 언어로 번역할 수 있습니다. 이를 통해 한 언어에서 다른 여러 언어로 앱을 효율적으로 번역할 수 있습니다.
+
+정답: **하나의 소스, 여러 목적지**
+
+---
+
+## Question 2:
+What does default project language define?
+- The language selected for the given user at the moment of account creation.
+- The language which users will see when using your app.
+- The language in which project content is visualized in Studio Pro.
+- The language which will be selected by the user at the first log-in.
+
+### 번역:
+**기본 프로젝트 언어는 무엇을 정의합니까?**
+- 계정 생성 시 사용자에게 선택된 언어
+- 사용자가 앱을 사용할 때 볼 언어
+- Studio Pro에서 프로젝트 콘텐츠가 시각화되는 언어
+- 사용자가 처음 로그인할 때 선택하는 언어
+
+### Explanation:
+The default project language defines the language that users will see when using your app. This is the language displayed to users if no other language settings are applied.
+
+**해설:**
+기본 프로젝트 언어는 사용자가 앱을 사용할 때 기본적으로 표시되는 언어를 정의합니다. 다른 언어 설정이 적용되지 않으면 이 언어가 사용자에게 표시됩니다.
+
+정답: **사용자가 앱을 사용할 때 볼 언어**
+
+---
+
+## Question 3:
+When and how a default language of an app needs to be selected?
+- Manually at the moment of app creation.
+- Automatically at the moment of app creation.
+- Manually when opening an app in Studio Pro.
+- Automatically when opening an app in Studio Pro.
+
+### 번역:
+**앱의 기본 언어는 언제, 어떻게 선택되어야 합니까?**
+- 앱 생성 시 수동으로
+- 앱 생성 시 자동으로
+- Studio Pro에서 앱을 열 때 수동으로
+- Studio Pro에서 앱을 열 때 자동으로
+
+### Explanation:
+The default language of an app is automatically set at the moment of app creation. This setting can be adjusted manually later if needed.
+
+**해설:**
+앱의 기본 언어는 앱 생성 시 자동으로 설정됩니다. 필요에 따라 나중에 수동으로 조정할 수 있습니다.
+
+정답: **앱 생성 시 자동으로**
+
+---
+
+## Question 4:
+Where can you choose the development language?
+- In the language library
+- In the system texts
+- In the project folder
+- In the toolbar of Studio Pro
+
+### 번역:
+**개발 언어는 어디에서 선택할 수 있습니까?**
+
+- 언어 라이브러리
+- 시스템 텍스트
+- 프로젝트 폴더
+- Studio Pro의 툴바
+
+### Explanation:
+The development language can be chosen in the toolbar of Studio Pro. This language setting is used for displaying project content during development.
+
+**해설:**
+개발 언어는 Studio Pro의 툴바에서 선택할 수 있습니다. 이 언어 설정은 개발 중에 프로젝트 콘텐츠를 표시하는 데 사용됩니다.
+
+정답: **Studio Pro의 툴바**
+
+---
+
+## Question 5:
+Which of the following functionalities do you need to use to show a complete list of all translatable texts of a source and destination language?
+- Import translation
+- Batch translation
+- Occurrence window
+- Export translation
+
+### 번역:
+**소스와 목적지 언어의 모든 번역 가능한 텍스트 목록을 표시하려면 어떤 기능을 사용해야 합니까?**
+- 번역 가져오기
+- 일괄 번역
+- 발생 창
+- 번역 내보내기
+
+### Explanation:
+To show a complete list of all translatable texts for a source and destination language, you use the Batch translation functionality. This tool helps manage translations more efficiently by listing all translatable texts and their occurrences.
+
+**해설:**
+소스와 목적지 언어의 모든 번역 가능한 텍스트 목록을 표시하려면 일괄 번역 기능을 사용합니다. 이 도구는 번역 가능한 모든 텍스트와 그 발생 위치를 목록화하여 번역 관리를 효율적으로 도와줍니다.
+
+정답: **일괄 번역**
 
 
 
