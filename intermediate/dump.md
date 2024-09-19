@@ -220,3 +220,112 @@
     **답변:** Step 2 is active, Step 1 is visited  
     **번역:** 4단계 페이지 템플릿을 사용하여 생성된
 
+45. **In order to re-use a header from a given page on several other pages, which of the following options would allow you to automatically update the content of this header throughout the app after its content has been changed?**  
+    **답변:** Snippet  
+    **번역:** 주어진 페이지에서 헤더를 여러 다른 페이지에서 재사용하려면, 헤더의 내용이 변경된 후 앱 전체에서 자동으로 업데이트되도록 할 수 있는 옵션은 무엇인가요?  
+    **해석:** 헤더의 내용을 여러 페이지에서 자동으로 업데이트하려면 "Snippet"을 사용해야 합니다.
+
+46. **Which of the following widgets can be used to select associated objects, when multiple select is possible?**  
+    **답변:** Reference set selector  
+    **번역:** 여러 선택이 가능한 경우, 연관된 객체를 선택하는 데 사용할 수 있는 위젯은 무엇인가요?  
+    **해석:** 여러 개의 연관된 객체를 선택하려면 "Reference set selector" 위젯을 사용합니다.
+
+47. **From the buttons on a Data Grid widget that work with single select mode, which ones need to be configured with multi-select mode?**  
+    **답변:** Edit, Delete  
+    **번역:** 단일 선택 모드에서 작동하는 Data Grid 위젯의 버튼 중, 다중 선택 모드로 구성해야 하는 버튼은 무엇인가요?  
+    **해석:** "Edit"와 "Delete" 버튼은 다중 선택 모드로 구성해야 합니다.
+
+48. **Where should you configure that only selected roles are allowed to see a container on a page?**  
+    **답변:** In the Conditional visibility property of the container.  
+    **번역:** 페이지에서 컨테이너를 볼 수 있는 역할을 제한하려면 어디에서 설정해야 하나요?  
+    **해석:** 컨테이너의 Conditional visibility 속성에서 특정 역할만 컨테이너를 볼 수 있도록 설정합니다.
+
+49. **How is the size of popup windows set to fixed?**  
+    **답변:** By setting the resizable property of the page to No.  
+    **번역:** 팝업 창의 크기를 고정하려면 어떻게 설정하나요?  
+    **해석:** 페이지의 resizable 속성을 No로 설정하여 팝업 창의 크기를 고정할 수 있습니다.
+
+50. **How can you ensure that the buttons in the footer area of the relatively long and scrollable pop-up page are always visible?**  
+    **답변:** By removing the outer layout grid.  
+    **번역:** 상대적으로 길고 스크롤 가능한 팝업 페이지의 푸터 영역에 있는 버튼이 항상 보이도록 하려면 어떻게 해야 하나요?  
+    **해석:** 외부 레이아웃 그리드를 제거하여 푸터 버튼을 항상 보이게 할 수 있습니다.
+
+51. **What constraint can you use to show the most recently created items at the top of the page?**  
+    **답변:** createdDate (descending)  
+    **번역:** 페이지의 상단에 가장 최근에 생성된 항목을 표시하려면 어떤 제약 조건을 사용할 수 있나요?  
+    **해석:** 가장 최근에 생성된 항목을 상단에 표시하려면 "createdDate (descending)" 제약 조건을 사용합니다.
+
+52. **What are the default Mendix options for the popups?**  
+    **답변:** Resizable with size determined automatically, with layout grid as the most outer layer of the page.  
+    **번역:** 팝업의 기본 Mendix 옵션은 무엇인가요?  
+    **해석:** 기본 Mendix 팝업 옵션은 자동으로 결정되는 크기와 함께 크기 조정 가능하며, 레이아웃 그리드가 페이지의 가장 바깥쪽 레이어로 설정됩니다.
+
+53. **How to make the popup window always visible?**  
+    **답변:** Remove the outer layer grid.  
+    **번역:** 팝업 창을 항상 보이게 하려면 어떻게 해야 하나요?  
+    **해석:** 팝업 창을 항상 보이게 하려면 외부 레이어 그리드를 제거해야 합니다.
+
+54. **Which of the following options provides an easy way to limit access rights for a given role to a specific functionality within an app?**  
+    **답변:** By adding a separate module.  
+    **번역:** 앱 내에서 특정 기능에 대한 주어진 역할의 접근 권한을 제한하는 쉬운 방법은 무엇인가요?  
+    **해석:** 특정 기능에 대한 접근 권한을 제한하려면 별도의 모듈을 추가하는 방법이 적합합니다.
+
+55. **Where on the page can the Menu document be displayed in an app?**  
+    **답변:** Anywhere  
+    **번역:** 앱에서 Menu 문서는 페이지의 어디에 표시될 수 있나요?  
+    **해석:** Menu 문서는 페이지의 어디에나 표시될 수 있습니다.
+
+56. **What alternative to drawing an association between two entities can you use to connect two entities, each located in a separate domain model?**  
+    **답변:** By right-clicking in an entity and selecting Add>Association.  
+    **번역:** 두 엔터티가 각각 다른 도메인 모델에 위치할 때, 두 엔터티를 연결하는 방법으로 연관을 그리는 대신 어떤 대안을 사용할 수 있나요?  
+    **해석:** 두 엔터티를 연결할 때, 한 엔터티를 오른쪽 클릭하고 Add>Association을 선택하는 방법을 사용할 수 있습니다.
+
+57. **Which of the following XPath constraints should be used to allow users to only see their own notifications?**  
+    **답변:** [Notifications.Notification_Account='[%CurrentUser%]']  
+    **번역:** 사용자가 자신의 알림만 볼 수 있도록 하려면 어떤 XPath 제약 조건을 사용해야 하나요?  
+    **해석:** 사용자가 자신의 알림만 보도록 하려면 XPath 제약 조건으로 [Notifications.Notification_Account='[%CurrentUser%]']를 사용합니다.
+
+58. **What can you use whenever you wish to display a navigation menu, but not the main navigation tree?**  
+    **답변:** Menu  
+    **번역:** 내비게이션 메뉴를 표시하고 싶지만 주요 내비게이션 트리는 표시하고 싶지 않을 때, 무엇을 사용할 수 있나요?  
+    **해석:** 내비게이션 메뉴를 표시하려면 "Menu" 위젯을 사용할 수 있습니다.
+
+59. **How many source and destination languages can you specify?**  
+    **답변:** One source, one destination  
+    **번역:** 소스 및 대상 언어를 몇 개 지정할 수 있나요?  
+    **해석:** 소스와 대상 언어를 각각 하나씩 지정할 수 있습니다.
+
+60. **What does default project language define?**  
+    **답변:** The language which users will see when using your app.  
+    **번역:** 기본 프로젝트 언어는 무엇을 정의하나요?  
+    **해석:** 기본 프로젝트 언어는 사용자가 앱을 사용할 때 보게 되는 언어를 정의합니다.
+
+61. **When and how a default language of an app needs to be selected?**  
+    **답변:** Automatically at the moment of app creation.  
+    **번역:** 앱의 기본 언어는 언제, 어떻게 선택해야 하나요?  
+    **해석:** 앱 생성 시 자동으로 기본 언어가 선택됩니다.
+
+62. **Where can you choose the development language?**  
+    **답변:** In the toolbar of Studio Pro  
+    **번역:** 개발 언어는 어디에서 선택할 수 있나요?  
+    **해석:** 개발 언어는 Studio Pro의 툴바에서 선택할 수 있습니다.
+
+63. **Which of the following functionalities do you need to use to show a complete list of all translatable texts of a source and destination language?**  
+    **답변:** Batch translation  
+    **번역:** 소스와 대상 언어의 모든 번역 가능한 텍스트의 전체 목록을 표시하려면 어떤 기능을 사용해야 하나요?  
+    **해석:** 모든 번역 가능한 텍스트의 목록을 표시하려면 "Batch translation" 기능을 사용해야 합니다.
+
+64. **What is the easiest way to collect feedback from users from within your app?**  
+    **답변:** Use the feedback widget  
+    **번역:** 앱 내에서 사용자로부터 피드백을 수집하는 가장 쉬운 방법은 무엇인가요?  
+    **해석:** 사용자로부터 피드백을 수집하는 가장 쉬운 방법은 "feedback widget"을 사용하는 것입니다.
+
+65. **Where is page access configured?**  
+    **답변:** Module Security  
+    **번역:** 페이지 접근 권한은 어디에서 구성하나요?  
+    **해석:** 페이지 접근 권한은 "Module Security"에서 구성합니다.
+
+66. **What would be a reasonable validation rule to use for AllowedNumberOfVisitorsPerDay?**  
+    **답변:** Range <= 1000  
+    **번역:** AllowedNumberOfVisitorsPerDay에 사용할 수 있는 합리적인 유효성 검사 규칙은 무엇인가요?  
+    **해석:** "AllowedNumberOf
