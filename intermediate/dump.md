@@ -114,8 +114,6 @@
     **답변:** By creating a data snapshot and adding it to the deployment directory of your app.  
     **번역:** 버전 관리가 있는 앱에서 팀과 데이터베이스를 공유하기 위해 어떤 개념을 사용하나요?  
 
-# Mendix Intermediate Developer Exam Questions - 번역 및 해석
-
 24. **What type of conflict occurs when you and your colleague both modified the microflow implementing the delete behavior?**  
     **답변:** Modify-Modify  
     **번역:** 삭제 동작을 구현하는 마이크로플로우를 여러분과 동료가 동시에 수정했을 때 어떤 종류의 충돌이 발생하나요?  
