@@ -205,6 +205,72 @@
 보안을 업데이트하고 모든 새로운 기능을 테스트해봅시다.
 ### 5.1 보안 기능 설정하기
 1. **User**에게 모든 새로운 페이지와 마이크로플로우에 대한 접근 권한을 부여합니다.
-2. 축하합니다! 알림 시스템을 완전히 구축했습니다.
 
+# 퀴즈
+# 문제 및 정답 해설
+
+## Question 1:
+### Which of the following options provides an easy way to limit access rights for a given role to a specific functionality within an app?
+- **By adding a separate module.**
+- By creating a package.
+- By creating a snippet.
+- By creating a separate domain model.
+
+**해석:** 
+앱 내에서 특정 기능에 대한 역할의 접근 권한을 제한하는 가장 쉬운 방법은 무엇인가?
+
+**정답 해설:**
+- 정답은 **"By adding a separate module"**입니다. 별도의 모듈을 추가하면 특정 기능에 대한 접근 권한을 간단하게 관리할 수 있습니다. 모듈별로 보안 설정을 적용할 수 있기 때문에, 특정 역할에 대해 필요한 기능만 노출하도록 쉽게 제한할 수 있습니다.
+
+## Question 2:
+### Where on the page can the Menu document be displayed in an app?
+- Only on a page
+- Only inside of a menu widget
+- Only in a navigation layout
+- **Anywhere**
+
+**해석:**
+앱에서 메뉴 문서를 페이지의 어디에 표시할 수 있는가?
+
+**정답 해설:**
+- 정답은 **"Anywhere"**입니다. 메뉴 문서는 페이지나 네비게이션 레이아웃, 메뉴 위젯 등 앱 내 어디에나 배치하여 사용할 수 있습니다.
+
+## Question 3:
+### What alternative to drawing an association between two entities can you use to connect two entities, each located in a separate domain model?
+- By setting the 'Specialization' setting of one entity to the other.
+- By right-clicking in an entity and selecting Add>Association.
+- **By copying entities from one domain model to another.**
+- By writing Java code.
+
+**해석:**
+두 개의 도메인 모델에 위치한 두 엔티티를 연결하기 위한 연관 관계 설정의 대안은 무엇인가?
+
+**정답 해설:**
+- 정답은 **"By copying entities from one domain model to another"**입니다. 다른 도메인 모델에 있는 엔티티끼리 연결하려면, 연관을 그리는 대신 엔티티를 복사하여 두 도메인 간 연결을 생성할 수 있습니다.
+
+## Question 4:
+### Which of the following XPath constraints should be used to allow users to only see their own notifications?
+- [Notifications.Notification_Account=System.User']
+- Notifications.Notification_Account='[%CurrentSession%]'
+- **[Notifications.Notification_Account='[%CurrentUser%]']**
+- Notifications.Notification_Account=ID'
+
+**해석:**
+사용자가 자신의 알림만 볼 수 있도록 하기 위해 사용해야 하는 XPath 제약 조건은 무엇인가?
+
+**정답 해설:**
+- 정답은 **"[Notifications.Notification_Account='[%CurrentUser%]']"**입니다. 이 제약 조건은 현재 로그인한 사용자의 알림만 표시하도록 제한합니다. `%CurrentUser%`는 현재 사용자의 식별자입니다.
+
+## Question 5:
+### What can you use whenever you wish to display a navigation menu, but not the main navigation tree?
+- External icons
+- Javascript
+- **Menu**
+- Modules from the App Store
+
+**해석:**
+메인 네비게이션 트리가 아닌 네비게이션 메뉴를 표시하고 싶을 때 사용할 수 있는 것은 무엇인가?
+
+**정답 해설:**
+- 정답은 **"Menu"**입니다. 메뉴 문서를 사용하여 메인 네비게이션 트리가 아닌 사용자 정의 네비게이션 메뉴를 표시할 수 있습니다.
 
