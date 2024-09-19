@@ -3,6 +3,7 @@
 Intermediate Developer Certification 관련 강의 이름은 아래와 같습니다. 
 
 # Intermediate Level
+## path
 - [Unlocking True Collaboration](https://github.com/yeomyaloo/mendix_study/tree/main/intermediate/Unlocking_True_Collaboration)
     - 애자일과 관련해서 이 챕터에서 많이 다룸
     - [스크럼](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Unlocking_True_Collaboration/SCRUM.md)
@@ -23,6 +24,8 @@ Intermediate Developer Certification 관련 강의 이름은 아래와 같습니
     - [Start Building the Event App](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Building_an_Event_App_Using_Microflows/Start_Building_the_Event_App.md) 
 - Expand Your Domain Modeling Skills
 
+## dump? 
+- [Intermediate Quiz](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/dump.md)
 
 ## 보안과 마이크로플로우
 - 난이도가 있는 파트로 이 부분에서 주의를 해야 한다. (최소 4점을 받아야 통과)
