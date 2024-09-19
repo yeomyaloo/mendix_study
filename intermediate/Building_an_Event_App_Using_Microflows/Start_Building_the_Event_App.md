@@ -15,7 +15,7 @@
 # 실제 프로젝트 세팅
 ## 1. 프로젝트 생성
 ### 1.1 방법
-1. Mendix 포털을 열어 시작합니다.
+1. [Mendix 포털을 열어 시작합니다.](https://sprintr.home.mendix.com/)
 
 2. 오른쪽 상단에서 Create App 버튼을 보게 되며, 클릭합니다.
 
