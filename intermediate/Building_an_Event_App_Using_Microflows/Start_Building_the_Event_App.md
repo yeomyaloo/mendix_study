@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5db0cf55-5c6f-41ff-9981-2ece5fb63a16)# Learning Objectives - 학습 목표
+# Learning Objectives - 학습 목표
 1. 앱 생성
    - 새로운 앱을 생성할 수 있습니다.
 2. 앱에 피드백 위젯 추가 
