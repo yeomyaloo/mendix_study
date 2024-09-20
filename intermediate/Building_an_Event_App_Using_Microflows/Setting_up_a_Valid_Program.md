@@ -1,4 +1,4 @@
-# 서브 마이크로플로우 사용하기
+![image](https://github.com/user-attachments/assets/16b2f119-0c1c-42fe-9a22-1bce6a8ae833)# 서브 마이크로플로우 사용하기
 ### 마이크로플로우와 서브마이크로플로우
 - 마이크로플로우는 그 사용 방법과 무수한 기능 덕분에 매우 복잡해질 수 있습니다.
   - 이를 통해 복잡한 프로세스를 구축할 수 있습니다. 그렇다면 이러한 마이크로플로우를 어떻게 제어할 수 있을까요?
@@ -94,7 +94,6 @@
 - 그렇다면 가독성, 재사용성, 유지 관리를 개선하기 위해 무엇을 할 수 있을까요? 서브 마이크로플로우를 활용할 수 있습니다.
 - 유효성 검사 마이크로플로우의 일부를 추출하는 것이 얼마나 쉬운지 살펴보겠습니다.
 
-
 ### 3.3 서브 마이크로플로우 생성
 - 어디서 논리적 분리를 할 수 있을지 확인하여 추출할 부분을 결정합니다.
 - 이상적으로는 먼저 모든 필수 필드가 입력되었는지 확인한 후, 종속성을 검증하는 단계로 넘어가야 합니다.
@@ -172,18 +171,23 @@
 
 ## 1. 규칙 및 문자열 검증
 ### 1.1 문자열 검증
-데이터 타입 String을 검증하는 방식부터 시작하겠습니다. 예를 들어, $ProgramItem/Title != empty와 같이 검증했을 수 있습니다. 그러나 이 방법은 하나 이상의 공백 또는 값이 입력되었다가 나중에 지워진 경우를 포함하지 않습니다. Mendix에서 문자열의 기본 값은 empty이지만, 이는 ' '와는 다릅니다. 빈 문자열은 초기 설정값이며, ' ' 문자열은 사용자가 기존의 값을 지우면서 생성할 수 있습니다.
-
-모든 String 데이터 타입을 검증하기 위해 재사용 가능한 규칙을 구축할 것입니다.
+- 데이터 타입 String을 검증하는 방식부터 시작하겠습니다.
+  - 예를 들어, $ProgramItem/Title != empty와 같이 검증했을 수 있습니다.
+  - 그러나 이 방법은 하나 이상의 공백 또는 값이 입력되었다가 나중에 지워진 경우를 포함하지 않습니다.
+  - Mendix에서 문자열의 기본 값은 empty이지만, 이는 ' '와는 다릅니다. 빈 문자열은 초기 설정값이며, ' ' 문자열은 사용자가 기존의 값을 지우면서 생성할 수 있습니다.
+- 모든 String 데이터 타입을 검증하기 위해 재사용 가능한 규칙을 구축할 것입니다.
 
 ### 1.2 규칙 생성
-1. **규칙 생성**: 프로젝트 탐색기에서 규칙을 생성하고 이를 `VALStringNotEmpty`라고 명명합니다. 모듈 폴더에서 오른쪽 클릭한 후 `Add other > Rule`을 선택하여 추가합니다. 이 마이크로플로우의 반환 타입이 Boolean으로 설정되어 있는지 확인합니다. 규칙은 Boolean 또는 Enumeration을 반환해야 합니다.
-2. **입력 매개변수 추가**: 규칙에 문자열 타입의 입력 매개변수를 추가하고 이를 `InputString`이라고 명명합니다.
-3. **조건 분기 추가**: 규칙에 두 가지 조건을 확인하는 분기 조건을 추가합니다:
+1. **규칙 생성**: 프로젝트 탐색기에서 규칙을 생성하고 이를 `VALStringNotEmpty`라고 명명합니다. 모듈 폴더에서 오른쪽 클릭한 후 `Add other > Rule`을 선택하여 추가합니다. 이 마이크로플로우의 반환 타입이 Boolean으로 설정되어 있는지 확인합니다. 규칙은 Boolean 또는 Enumeration을 반환해야 합니다.</br>
+![image](https://github.com/user-attachments/assets/daa98d97-76ef-4a32-88c7-eee9c46bc295)
+![image](https://github.com/user-attachments/assets/7dc8f0c4-3ac8-4e6d-ba4b-b86730cd0175)
+3. **입력 매개변수 추가**: 규칙에 문자열 타입의 입력 매개변수를 추가하고 이를 `InputString`이라고 명명합니다. </br>
+![image](https://github.com/user-attachments/assets/03af50ab-1475-45f8-b5a8-afbe9fd63d5d)
+4. **조건 분기 추가**: 규칙에 두 가지 조건을 확인하는 분기 조건을 추가합니다:
    - 문자열이 비어 있지 않은지 확인
    - 문자열이 지워지지 않았거나 공백만으로 구성되어 있는지 확인
    이를 확인하기 위해 표현식 `trim($InputString) != ''`을 사용합니다.
-4. **결과 시퀀스 정의**: 결과가 true 또는 false이므로 두 개의 시퀀스 흐름을 정의합니다. true 결과에 대한 기존 시퀀스 흐름을 사용하고, 이를 왼쪽에서 오른쪽으로 설정하여 ‘행복한’ 경로로 설정합니다. 반환 값은 자동으로 true로 설정됩니다.
+5. **결과 시퀀스 정의**: 결과가 true 또는 false이므로 두 개의 시퀀스 흐름을 정의합니다. true 결과에 대한 기존 시퀀스 흐름을 사용하고, 이를 왼쪽에서 오른쪽으로 설정하여 ‘행복한’ 경로로 설정합니다. 반환 값은 자동으로 true로 설정됩니다.
    다음으로 두 번째 시퀀스 흐름을 생성하고 두 번째 End Event로 연결합니다. 이 시퀀스 흐름은 자동으로 false로 표시되며 반환 값은 false로 설정됩니다. Mendix Studio Pro는 가능한 옵션을 평가하고 하나의 옵션이 남았을 때 자동으로 채워집니다. 완성된 규칙은 아래 이미지와 비슷해야 합니다.
 
 ### 1.3 규칙 사용
@@ -203,3 +207,56 @@
 
 이제 모든 String 속성이 동일한 방식으로 빈 값이 체크되도록 하는 규칙을 재사용했습니다. 마이크로플로우도 동일한 방식으로 재사용할 수 있음을 상상할 수 있습니다.
 
+# 퀴즈
+### Question 1: What is a limitation of a sub-microflow compared to a regular microflow?
+**한국어 번역**: 일반 마이크로플로우에 비해 서브 마이크로플로우의 제한은 무엇인가요?
+
+- **정답**: None. Sub-microflows are equally capable.
+- **틀린 답변 해설**:
+  - "Branching is not possible."는 틀린 답변입니다. 서브 마이크로플로우에서도 분기가 가능합니다.
+  - "You have a smaller selection of activities."는 틀린 답변입니다. 서브 마이크로플로우도 일반 마이크로플로우와 비슷한 활동을 수행할 수 있습니다.
+  - "A sub-microflow may only return a Boolean."는 틀린 답변입니다. 서브 마이크로플로우는 다양한 값을 반환할 수 있습니다.
+
+---
+
+### Question 2: What main benefit do sub-microflows offer?
+**한국어 번역**: 서브 마이크로플로우의 주요 이점은 무엇인가요?
+
+- **정답**: Better maintainability.
+- **틀린 답변 해설**:
+  - "Increased logical capability"는 틀린 답변입니다. 서브 마이크로플로우는 복잡한 논리를 확장하지 않으며, 기능적 논리에서 차이가 없습니다.
+  - "Smaller memory usage"는 틀린 답변입니다. 메모리 사용량의 차이는 없습니다.
+  - "Improved performance"는 틀린 답변입니다. 성능이 크게 개선되지는 않습니다.
+
+---
+
+### Question 3: If you want to leave notes for future developers (or yourself) in a microflow, what can you use?
+**한국어 번역**: 마이크로플로우에 향후 개발자(또는 자신)를 위한 메모를 남기고 싶다면 무엇을 사용할 수 있나요?
+
+- **정답**: Annotations.
+- **틀린 답변 해설**:
+  - "Comments"는 틀린 답변입니다. 마이크로플로우에서 직접 코멘트를 추가할 수 없습니다.
+  - "Sticky notes"는 틀린 답변입니다. Sticky notes 기능은 없습니다.
+  - "Captions"는 틀린 답변입니다. Captions은 주석 기능이 아닙니다.
+
+---
+
+### Question 4: What is a limitation of a rule compared to a microflow?
+**한국어 번역**: 마이크로플로우에 비해 규칙의 제한은 무엇인가요?
+
+- **정답**: You have a smaller selection of activities.
+- **틀린 답변 해설**:
+  - "A rule may only return a Boolean."는 틀린 답변입니다. 규칙이 Boolean을 반환하는 것이 주 기능일 뿐, 규칙이 마이크로플로우와 동일한 작업을 수행할 수 있는지 여부는 다릅니다.
+  - "None. Rules are equally capable."는 틀린 답변입니다. 규칙은 마이크로플로우에 비해 여러 면에서 제한적입니다.
+  - "Branching is not possible."는 틀린 답변입니다. 규칙에서도 간단한 분기는 가능합니다.
+
+---
+
+### Question 5: You’ve replaced a microflow with newer functionality and want to test it. However, you don’t want to delete the old microflow permanently in case something goes wrong. How can you do this?
+**한국어 번역**: 마이크로플로우를 새로운 기능으로 대체했지만 문제가 생길 경우를 대비해 기존 마이크로플로우를 영구적으로 삭제하고 싶지 않습니다. 어떻게 해야 하나요?
+
+- **정답**: Exclude it from the project.
+- **틀린 답변 해설**:
+  - "Rename it."는 틀린 답변입니다. 이름을 변경하는 것만으로는 기능이 비활성화되지 않습니다.
+  - "Deactivate it."는 틀린 답변입니다. 마이크로플로우를 비활성화하는 기능은 없습니다.
+  - "Soft delete to the recycle bin and restore later."는 틀린 답변입니다. Mendix에서 제공하는 기능이 아닙니다.
