@@ -31,7 +31,7 @@
 - 루프는 시작 및 종료 이벤트를 제외한 모든 일반적인 마이크로플로우 요소를 포함할 수 있습니다.
 - 또한 루프는 중단(break) 이벤트와 계속(continue) 이벤트를 포함할 수 있습니다.
   - 중단 이벤트는 목록에 대한 반복을 중지하고, 계속 이벤트는 현재 반복만 중지하고 다음 객체의 반복을 시작합니다.
-- 루프가 반복하는 객체는 반복자(iterator)라고 하며, 마이크로플로우의 입력 파라미터와 동일한 방식으로 나타납니다.
+- 루프가 반복하는 객체는 반복자(iterator)라고 하며, 마이크로플로우의 입력 파라미터와 동일한 방식으로 나타납니다.</br>
 ![image](https://github.com/user-attachments/assets/1cd750f4-6431-4f98-87e2-7fd135f7552d)
 
 #### 1.1.3 집계 함수(Aggregate functions)
@@ -61,7 +61,8 @@
 - 따라서 `Title`과 `Message` 속성을 만들어야 하며
 - `Message`는 무제한 문자열로 설정해야 합니다.
 - 또한, 뉴스레터가 사용자에게 전송되었는지 추적해야 하므로 `IsSent`라는 불린(Boolean) 속성을 추가해야 합니다.
-- 마지막으로, `createdDate` 저장을 체크해야 합니다.
+- 마지막으로, `createdDate` 저장을 체크해야 합니다.</br>
+![image](https://github.com/user-attachments/assets/b9bdd869-3d9c-4561-9fde-247181c658a9)
 
 ### 2.3 엔티티 추가와 연관 관게 추가
 - 뉴스레터는 이메일로 전송되므로, `Email` 엔터티를 생성하고
@@ -219,6 +220,99 @@
 ![image](https://github.com/user-attachments/assets/a0744a35-3e9f-4044-93ff-31b94e870746)
 
 
+# 퀴즈
+## Question 1:  
+**How can you have a microflow automatically run at a specific moment in time?**  
+마이크로플로우를 특정 시간에 자동으로 실행되도록 하려면 어떻게 해야 하나요?
+
+- [ ] Have it called as a sub-microflow.  
+- [ ] Create it as a nanoflow.  
+- [x] Create and enable a scheduled event.  
+- [ ] Use the [%CurrentDateTime%] token.  
+
+### 해석:
+- **틀린 답변**:  
+  - `Have it called as a sub-microflow`: 서브 마이크로플로우는 다른 마이크로플로우에서 호출되는 것이지, 특정 시간에 자동 실행되는 것이 아님.
+  - `Create it as a nanoflow`: 나노플로우는 브라우저에서 실행되며 예약된 시간을 기준으로 자동 실행되는 것이 아님.
+  - `Use the [%CurrentDateTime%] token`: 이 토큰은 단순히 현재 날짜와 시간을 반환하는 데 사용되며, 특정 시간에 자동 실행되도록 설정할 수 없음.
+- **맞는 답변**:  
+  - `Create and enable a scheduled event`: 스케줄된 이벤트는 특정 시간에 자동으로 마이크로플로우를 실행하기 위해 설정할 수 있는 기능임.
+
+---
+
+## Question 2:  
+**What can you use to exit a loop early, instead of finishing the entire list of iterator objects?**  
+반복되는 모든 객체를 끝까지 처리하지 않고 루프를 조기에 종료하는 데 사용할 수 있는 것은 무엇인가요?
+
+- [x] A break event  
+- [ ] A continue event  
+- [ ] A go-to event  
+- [ ] An exit event  
+
+### 해석:
+- **틀린 답변**:  
+  - `A continue event`: 이 이벤트는 현재 반복만 종료하고, 다음 반복으로 넘어가는 역할을 하므로, 루프를 완전히 종료하지 않음.
+  - `A go-to event`: 특정 플로우로 이동하는 이벤트로, 루프 종료와는 관련 없음.
+  - `An exit event`: 이 이벤트는 존재하지 않음.
+- **맞는 답변**:  
+  - `A break event`: break 이벤트는 루프를 조기에 종료하는 데 사용되며, 더 이상 리스트의 나머지 항목을 처리하지 않음.
+
+---
+
+## Question 3:  
+**You want to find the total number of objects in a list. What can you easily use to do this?**  
+리스트 내 객체의 총 개수를 찾으려면 어떻게 해야 하나요?
+
+- [ ] Create a loop with a counter variable.  
+- [x] Use an aggregate list function.  
+- [ ] Retrieve the value from the iterator object.  
+- [ ] Use the [%total%] token.  
+
+### 해석:
+- **틀린 답변**:  
+  - `Create a loop with a counter variable`: 루프를 사용하여 직접 객체 수를 세는 것은 가능하지만, 비효율적이며 시간이 많이 소요됨.
+  - `Retrieve the value from the iterator object`: Iterator는 개별 객체를 가리킬 뿐, 리스트의 총 객체 수를 반환하지 않음.
+  - `Use the [%total%] token`: 이 토큰은 존재하지 않음.
+- **맞는 답변**:  
+  - `Use an aggregate list function`: 리스트의 총 객체 수를 효율적으로 계산할 수 있는 방법으로, `Aggregate List` 기능을 사용하여 쉽게 객체 수를 구할 수 있음.
+
+---
+
+## Question 4:  
+**What are batches used for?**  
+배치는 무엇을 처리하는 데 사용되나요?
+
+- [ ] Hotfixing errors in production.  
+- [ ] Running nightly cycles.  
+- [ ] Duplicating datasets.  
+- [x] Processing large amounts of data.  
+
+### 해석:
+- **틀린 답변**:  
+  - `Hotfixing errors in production`: 배치는 오류 수정과 관련이 없음.
+  - `Running nightly cycles`: 배치는 일일 주기 작업과 직접적인 관련이 없음.
+  - `Duplicating datasets`: 배치는 데이터세트를 복제하는 데 사용되지 않음.
+- **맞는 답변**:  
+  - `Processing large amounts of data`: 배치는 많은 양의 데이터를 처리할 때, 이를 작은 덩어리로 나눠 효율적으로 처리하는 데 사용됨.
+
+---
+
+## Question 5:  
+**What is the list object in a loop called?**  
+루프에서 반복되는 리스트 객체를 무엇이라고 하나요?
+
+- [ ] An aggregate list  
+- [ ] A looped list  
+- [x] An iterator  
+- [ ] A retrieval list  
+
+### 해석:
+- **틀린 답변**:  
+  - `An aggregate list`: 집계 리스트는 데이터를 집계할 때 사용하는 리스트일 뿐, 루프 내에서 사용되는 리스트와는 다름.
+  - `A looped list`: 이 용어는 존재하지 않음.
+  - `A retrieval list`: 검색된 객체 리스트일 수 있으나, 루프에서 사용되는 객체는 `Iterator`로 불림.
+- **맞는 답변**:  
+  - `An iterator`: 루프에서 반복되는 리스트 객체는 `Iterator`라고 하며, 이는 리스트 내 각 객체를 참조하는 역할을 함.
 
 
 
