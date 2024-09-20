@@ -25,8 +25,10 @@ Intermediate Developer Certification 관련 강의 이름은 아래와 같습니
     - [Setting up a Valid Program](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Building_an_Event_App_Using_Microflows/Setting_up_a_Valid_Program.md)
     - [Signing up for the Event](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Building_an_Event_App_Using_Microflows/Signing_up_for_the_Event.md)
     - [Informing Your Guests](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Building_an_Event_App_Using_Microflows/Informing_Your_Guests.md)
-- Expand Your Domain Modeling Skills
+- [Expand Your Domain Modeling Skills](https://github.com/yeomyaloo/mendix_study/tree/main/intermediate/Expand_Your_Domain_Modeling_Skills)
     - [멘딕스 공식 홈페이지: Expand Your Domain Modeling Skills](https://academy.mendix.com/link/paths/59/Expand-Your-Domain-Modeling-Skills)
+    - [Building the Base App](https://github.com/yeomyaloo/mendix_study/blob/main/intermediate/Expand_Your_Domain_Modeling_Skills/Building_the_Base_App.md)
+    - []()
     - []()
 
 ## dump? 
