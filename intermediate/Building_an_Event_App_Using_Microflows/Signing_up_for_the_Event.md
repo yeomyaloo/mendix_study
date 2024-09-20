@@ -62,8 +62,9 @@ Mendix에서 마이크로플로우를 만들 때, 많은 경우 변수를 사용
   - 변수는 마이크로플로우의 출력 값(반환 값)으로도 사용될 수 있습니다.
 
 ## 3. 토큰(Tokens)
-- 토큰은 특별한 유형의 변수입니다.
+- 토큰은 `특별한 유형의 변수`입니다.
 - 토큰은 마이크로플로우에서 사용할 수 있는 시스템 생성 값으로, 예를 들어 결정 또는 XPath 제약 조건에서 사용됩니다.
+- System generated value
 
 ### 3.1 토큰의 특징
 - 여러 가지 토큰이 있으며, 대부분은 날짜 및 시간과 관련이 있습니다. 이러한 날짜 및 시간 토큰은 정확히 지정된 순간을 포함합니다. 시간대와 UTC의 시간 차이에 주의해야 합니다(날짜 및 시간 관련 정보는 Mendix 참조 가이드의 날짜 및 시간 처리 FAQ를 참조하세요).
@@ -353,3 +354,92 @@ Mendix 플랫폼의 가장 강력한 자산 중 하나는 원격으로 디버깅
 이제 디버거 동작 "계속"을 사용하여 나머지 마이크로플로우를 실행할 수 있습니다. 중단점을 제거하고 페이지 닫기 활동에 새 중단점을 놓습니다. 새 기능을 사용하기 위해 앱을 재시작하고 모든 것이 잘 진행되는지 확인합니다.
 
 이제 모든 것이 잘 작동하며, 새로운 사용자로 로그인할 수 있습니다. 멋지네요!
+
+# 퀴즈
+## Question 1: 
+How can you allow users to access parts of an app (like a login page) without needing to log in?
+- **Set up anonymous users.**
+
+### 한글 번역:
+앱의 일부(예: 로그인 페이지)에 로그인하지 않고 접근할 수 있게 하려면 어떻게 해야 합니까?
+- **익명 사용자 설정하기.**
+
+### 오답 해설:
+- **Relax security for whichever pages need to be accessed**: 페이지의 보안을 완화하는 것은 앱의 보안성을 떨어뜨리고, 익명 사용자가 아닌 불특정 다수가 접근할 수 있어 위험할 수 있습니다.
+- **Set up trial users**: 체험 사용자 설정은 로그인 없이 접근하는 방법이 아니며, 로그인 후 일정 기간 동안만 사용 권한을 부여하는 방식입니다.
+- **Set account security accordingly**: 계정 보안 설정을 조정하는 것은 로그인 없이 접근을 허용하는 방법이 아닙니다.
+
+### 정답 해설:
+- **Set up anonymous users**: 익명 사용자 설정은 Mendix에서 인증 없이 특정 페이지에 접근할 수 있게 해주는 기능입니다. 이는 보안이 필요한 페이지와 그렇지 않은 페이지를 구분하는 데 유용합니다.
+
+---
+
+## Question 2: 
+In a microflow, what is a token?
+- **A system-generated value.**
+
+### 한글 번역:
+마이크로플로우에서 토큰이란 무엇인가요?
+- **시스템에서 생성된 값입니다.**
+
+### 오답 해설:
+- **A placeholder variable defined by the developer**: 토큰은 개발자가 정의한 변수의 자리 표시자가 아닙니다. 이는 시스템에서 생성된 고유한 값입니다.
+- **A value determining how many sub-microflows may be called in the current microflow**: 토큰은 서브 마이크로플로우의 호출 횟수를 결정하는 값이 아닙니다.
+- **A hash string used in user account validation**: 해시 문자열은 보통 사용자 계정 검증에 사용되지만, 토큰과는 다릅니다.
+
+### 정답 해설:
+- **A system-generated value**: 토큰은 시스템에서 생성되는 고유한 값으로, 특정 프로세스나 세션을 식별하는 데 사용됩니다. 이는 주로 인증이나 보안과 관련된 컨텍스트에서 많이 사용됩니다.
+
+---
+
+## Question 3: 
+In a microflow expression, “toUpperCase” is an example of what?
+- **A function.**
+
+### 한글 번역:
+마이크로플로우 표현식에서 “toUpperCase”는 무엇의 예인가요?
+- **함수**입니다.
+
+### 오답 해설:
+- **A string transform**: 문자열 변환(transform)은 결과적으로 대문자로 바뀌지만, 변환 자체가 아니라 이는 함수로 구현됩니다.
+- **A cast**: 캐스트는 데이터 타입을 변환하는 것으로, 대문자 변환과는 관련이 없습니다.
+- **An operation**: 연산(operation)은 수학적 또는 논리적 처리를 의미하며, 문자열 변환과는 다릅니다.
+
+### 정답 해설:
+- **A function**: “toUpperCase”는 문자열을 대문자로 변환하는 함수입니다. 이와 같은 함수는 마이크로플로우에서 데이터를 처리할 때 사용됩니다.
+
+---
+
+## Question 4: 
+In a microflow, what would be an example of a variable?
+- **$Customer.**
+
+### 한글 번역:
+마이크로플로우에서 변수의 예는 무엇인가요?
+- **$Customer**입니다.
+
+### 오답 해설:
+- **Round**: Round는 숫자를 반올림하는 함수입니다. 변수는 아닙니다.
+- **Empty**: Empty는 특정 값이 비어 있는지 확인하는 표현식일 수 있지만, 변수는 아닙니다.
+- **formatDateTime**: formatDateTime은 날짜 및 시간을 형식화하는 함수로, 변수는 아닙니다.
+
+### 정답 해설:
+- **$Customer**: $로 시작하는 표현은 변수입니다. 마이크로플로우에서는 변수로 데이터를 저장하고 처리할 수 있습니다.
+
+---
+
+## Question 5: 
+You need to debug a microflow in production but don’t want to impact your users. How can you trigger debugging only when you personally are running the microflow?
+- **Set a breakpoint condition.**
+
+### 한글 번역:
+프로덕션에서 마이크로플로우를 디버깅해야 하지만 사용자에게 영향을 미치지 않으려면 어떻게 해야 합니까? 
+- **중단점 조건을 설정합니다.**
+
+### 오답 해설:
+- **Add a decision to the microflow**: 마이크로플로우에 결정을 추가하는 것은 디버깅 조건을 설정하는 방법이 아닙니다.
+- **Adjust security accordingly**: 보안을 조정하는 것은 특정 사용자에게만 디버깅을 트리거하는 방법이 아닙니다.
+- **Write a microflow expression**: 마이크로플로우 표현식만으로는 디버깅을 개인적으로 트리거할 수 없습니다.
+
+### 정답 해설:
+- **Set a breakpoint condition**: 중단점 조건을 사용하면 특정 사용자(예: 현재 사용자)에게만 디버깅이 트리거되도록 할 수 있습니다. 이는 프로덕션 환경에서 다른 사용자에게 영향을 주지 않고 디버깅할 때 매우 유용합니다.
